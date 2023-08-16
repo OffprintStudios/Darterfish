@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A6F82ED2A8C965300FEFD60 /* TopBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F82EC2A8C965300FEFD60 /* TopBarItems.swift */; };
+		8A6F82F02A8C98F300FEFD60 /* UserSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F82EF2A8C98F300FEFD60 /* UserSheet.swift */; };
 		8AA69ACC2A8C5BFA008A853F /* DarterfishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69ACB2A8C5BFA008A853F /* DarterfishApp.swift */; };
 		8AA69ACE2A8C5BFA008A853F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69ACD2A8C5BFA008A853F /* ContentView.swift */; };
 		8AA69AD02A8C5BFC008A853F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69ACF2A8C5BFC008A853F /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A6F82EC2A8C965300FEFD60 /* TopBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarItems.swift; sourceTree = "<group>"; };
+		8A6F82EF2A8C98F300FEFD60 /* UserSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSheet.swift; sourceTree = "<group>"; };
 		8AA69AC82A8C5BFA008A853F /* Darterfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darterfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA69ACB2A8C5BFA008A853F /* DarterfishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarterfishApp.swift; sourceTree = "<group>"; };
 		8AA69ACD2A8C5BFA008A853F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +128,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A6F82EB2A8C963E00FEFD60 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				8A6F82EC2A8C965300FEFD60 /* TopBarItems.swift */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
+		8A6F82EE2A8C98E200FEFD60 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8A6F82EF2A8C98F300FEFD60 /* UserSheet.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		8AA69ABF2A8C5BFA008A853F = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +218,8 @@
 		8AA69AFE2A8C6EF8008A853F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				8A6F82EE2A8C98E200FEFD60 /* User */,
+				8A6F82EB2A8C963E00FEFD60 /* Nav */,
 				8AA69AFF2A8C6EFE008A853F /* Themes */,
 			);
 			path = Util;
@@ -391,7 +413,9 @@
 				8AA69B032A8C6F6D008A853F /* CrimsonTheme.swift in Sources */,
 				8AA69B052A8C7169008A853F /* AquaTheme.swift in Sources */,
 				8AA69B0D2A8C72AF008A853F /* ThemeManager.swift in Sources */,
+				8A6F82F02A8C98F300FEFD60 /* UserSheet.swift in Sources */,
 				8AA69B072A8C71A6008A853F /* RoyalTheme.swift in Sources */,
+				8A6F82ED2A8C965300FEFD60 /* TopBarItems.swift in Sources */,
 				8AA69AF72A8C6080008A853F /* ExplorePage.swift in Sources */,
 				8AA69AFB2A8C60FC008A853F /* LibraryPage.swift in Sources */,
 				8AA69AF92A8C60F0008A853F /* SocialPage.swift in Sources */,
@@ -564,6 +588,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Darterfish/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Offprint;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -594,6 +620,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Darterfish/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Offprint;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
