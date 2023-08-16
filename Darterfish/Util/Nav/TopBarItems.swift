@@ -19,6 +19,13 @@ struct TopBarItems: ToolbarContent {
                         .foregroundStyle(Color("TextColor"))
                 }
                 
+                Button(action: openActivity) {
+                    Image("RemixIcon/Media/notification-2-line")
+                        .resizable()
+                        .frame(width: 26.0, height: 26.0)
+                        .foregroundStyle(Color("TextColor"))
+                }
+                
                 Button(action: openUser) {
                     Image("RemixIcon/UserAndFaces/user-5-line")
                         .resizable()
@@ -31,6 +38,10 @@ struct TopBarItems: ToolbarContent {
     
     func openMessages() {
         print("Messages Open")
+    }
+    
+    func openActivity() {
+        print("Activity Open")
     }
     
     func openUser() {

@@ -12,8 +12,19 @@ struct ContentView: View {
     @State private var isSheetPresented = false
     
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "JosefinSans-SemiBold", size: 42)!, .foregroundColor : UIColor(theme.accent)]
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "JosefinSans-Regular", size: 20)!]
+        let appear = UINavigationBarAppearance()
+        let attersLarge: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "JosefinSans-SemiBold", size: 42)!,
+            .foregroundColor: UIColor(theme.accent)
+        ]
+        let attersSmall: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "JosefinSans-Regular", size: 20)!
+        ]
+        appear.largeTitleTextAttributes = attersLarge
+        appear.titleTextAttributes = attersSmall
+        
+        UINavigationBar.appearance().standardAppearance = appear
+        UINavigationBar.appearance().compactAppearance = appear
     }
     
     var body: some View {
