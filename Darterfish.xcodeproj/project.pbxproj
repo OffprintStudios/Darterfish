@@ -14,6 +14,32 @@
 		8AA69ADD2A8C5BFD008A853F /* DarterfishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69ADC2A8C5BFD008A853F /* DarterfishTests.swift */; };
 		8AA69AE72A8C5BFD008A853F /* DarterfishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69AE62A8C5BFD008A853F /* DarterfishUITests.swift */; };
 		8AA69AE92A8C5BFD008A853F /* DarterfishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69AE82A8C5BFD008A853F /* DarterfishUITestsLaunchTests.swift */; };
+		8AA69AF72A8C6080008A853F /* ExplorePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69AF62A8C6080008A853F /* ExplorePage.swift */; };
+		8AA69AF92A8C60F0008A853F /* SocialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69AF82A8C60F0008A853F /* SocialPage.swift */; };
+		8AA69AFB2A8C60FC008A853F /* LibraryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69AFA2A8C60FC008A853F /* LibraryPage.swift */; };
+		8AA69AFD2A8C6115008A853F /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69AFC2A8C6115008A853F /* SearchPage.swift */; };
+		8AA69B012A8C6F08008A853F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B002A8C6F08008A853F /* Theme.swift */; };
+		8AA69B032A8C6F6D008A853F /* CrimsonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B022A8C6F6D008A853F /* CrimsonTheme.swift */; };
+		8AA69B052A8C7169008A853F /* AquaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B042A8C7169008A853F /* AquaTheme.swift */; };
+		8AA69B072A8C71A6008A853F /* RoyalTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B062A8C71A6008A853F /* RoyalTheme.swift */; };
+		8AA69B092A8C71E5008A853F /* AutumnTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B082A8C71E5008A853F /* AutumnTheme.swift */; };
+		8AA69B0B2A8C7211008A853F /* FieldTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B0A2A8C7211008A853F /* FieldTheme.swift */; };
+		8AA69B0D2A8C72AF008A853F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B0C2A8C72AF008A853F /* ThemeManager.swift */; };
+		8AA69B4F2A8C7EF2008A853F /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B412A8C7EEF008A853F /* JosefinSans-Light.ttf */; };
+		8AA69B502A8C7EF2008A853F /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B422A8C7EF0008A853F /* JosefinSans-LightItalic.ttf */; };
+		8AA69B512A8C7EF2008A853F /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B432A8C7EF0008A853F /* JosefinSans-ThinItalic.ttf */; };
+		8AA69B522A8C7EF2008A853F /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B442A8C7EF0008A853F /* JosefinSans-Regular.ttf */; };
+		8AA69B532A8C7EF2008A853F /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B452A8C7EF0008A853F /* JosefinSans-Italic.ttf */; };
+		8AA69B542A8C7EF2008A853F /* JosefinSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B462A8C7EF0008A853F /* JosefinSans-MediumItalic.ttf */; };
+		8AA69B552A8C7EF2008A853F /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B472A8C7EF0008A853F /* JosefinSans-Medium.ttf */; };
+		8AA69B562A8C7EF2008A853F /* JosefinSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B482A8C7EF1008A853F /* JosefinSans-ExtraLightItalic.ttf */; };
+		8AA69B572A8C7EF2008A853F /* JosefinSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B492A8C7EF1008A853F /* JosefinSans-BoldItalic.ttf */; };
+		8AA69B582A8C7EF2008A853F /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4A2A8C7EF1008A853F /* JosefinSans-Bold.ttf */; };
+		8AA69B592A8C7EF2008A853F /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4B2A8C7EF1008A853F /* JosefinSans-SemiBold.ttf */; };
+		8AA69B5A2A8C7EF2008A853F /* JosefinSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4C2A8C7EF2008A853F /* JosefinSans-SemiBoldItalic.ttf */; };
+		8AA69B5B2A8C7EF2008A853F /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4D2A8C7EF2008A853F /* JosefinSans-Thin.ttf */; };
+		8AA69B5C2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4E2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf */; };
+		8AA69B5E2A8C7EFB008A853F /* JosefinSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B5D2A8C7EFB008A853F /* JosefinSans.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +70,33 @@
 		8AA69AE22A8C5BFD008A853F /* DarterfishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarterfishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA69AE62A8C5BFD008A853F /* DarterfishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarterfishUITests.swift; sourceTree = "<group>"; };
 		8AA69AE82A8C5BFD008A853F /* DarterfishUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarterfishUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AA69AF62A8C6080008A853F /* ExplorePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePage.swift; sourceTree = "<group>"; };
+		8AA69AF82A8C60F0008A853F /* SocialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPage.swift; sourceTree = "<group>"; };
+		8AA69AFA2A8C60FC008A853F /* LibraryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPage.swift; sourceTree = "<group>"; };
+		8AA69AFC2A8C6115008A853F /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
+		8AA69B002A8C6F08008A853F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8AA69B022A8C6F6D008A853F /* CrimsonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimsonTheme.swift; sourceTree = "<group>"; };
+		8AA69B042A8C7169008A853F /* AquaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaTheme.swift; sourceTree = "<group>"; };
+		8AA69B062A8C71A6008A853F /* RoyalTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoyalTheme.swift; sourceTree = "<group>"; };
+		8AA69B082A8C71E5008A853F /* AutumnTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutumnTheme.swift; sourceTree = "<group>"; };
+		8AA69B0A2A8C7211008A853F /* FieldTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTheme.swift; sourceTree = "<group>"; };
+		8AA69B0C2A8C72AF008A853F /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		8AA69B132A8C7464008A853F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8AA69B412A8C7EEF008A853F /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Light.ttf"; sourceTree = "<group>"; };
+		8AA69B422A8C7EF0008A853F /* JosefinSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		8AA69B432A8C7EF0008A853F /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		8AA69B442A8C7EF0008A853F /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
+		8AA69B452A8C7EF0008A853F /* JosefinSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Italic.ttf"; sourceTree = "<group>"; };
+		8AA69B462A8C7EF0008A853F /* JosefinSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		8AA69B472A8C7EF0008A853F /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
+		8AA69B482A8C7EF1008A853F /* JosefinSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		8AA69B492A8C7EF1008A853F /* JosefinSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8AA69B4A2A8C7EF1008A853F /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		8AA69B4B2A8C7EF1008A853F /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		8AA69B4C2A8C7EF2008A853F /* JosefinSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8AA69B4D2A8C7EF2008A853F /* JosefinSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Thin.ttf"; sourceTree = "<group>"; };
+		8AA69B4E2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		8AA69B5D2A8C7EFB008A853F /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +147,10 @@
 		8AA69ACA2A8C5BFA008A853F /* Darterfish */ = {
 			isa = PBXGroup;
 			children = (
+				8AA69B142A8C7525008A853F /* Fonts */,
+				8AA69B132A8C7464008A853F /* Info.plist */,
+				8AA69AFE2A8C6EF8008A853F /* Util */,
+				8AA69AF52A8C6072008A853F /* Pages */,
 				8AA69ACB2A8C5BFA008A853F /* DarterfishApp.swift */,
 				8AA69ACD2A8C5BFA008A853F /* ContentView.swift */,
 				8AA69ACF2A8C5BFC008A853F /* Assets.xcassets */,
@@ -125,6 +182,61 @@
 				8AA69AE82A8C5BFD008A853F /* DarterfishUITestsLaunchTests.swift */,
 			);
 			path = DarterfishUITests;
+			sourceTree = "<group>";
+		};
+		8AA69AF52A8C6072008A853F /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				8AA69AF62A8C6080008A853F /* ExplorePage.swift */,
+				8AA69AF82A8C60F0008A853F /* SocialPage.swift */,
+				8AA69AFA2A8C60FC008A853F /* LibraryPage.swift */,
+				8AA69AFC2A8C6115008A853F /* SearchPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		8AA69AFE2A8C6EF8008A853F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8AA69AFF2A8C6EFE008A853F /* Themes */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8AA69AFF2A8C6EFE008A853F /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				8AA69B002A8C6F08008A853F /* Theme.swift */,
+				8AA69B022A8C6F6D008A853F /* CrimsonTheme.swift */,
+				8AA69B042A8C7169008A853F /* AquaTheme.swift */,
+				8AA69B062A8C71A6008A853F /* RoyalTheme.swift */,
+				8AA69B082A8C71E5008A853F /* AutumnTheme.swift */,
+				8AA69B0A2A8C7211008A853F /* FieldTheme.swift */,
+				8AA69B0C2A8C72AF008A853F /* ThemeManager.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		8AA69B142A8C7525008A853F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8AA69B5D2A8C7EFB008A853F /* JosefinSans.ttf */,
+				8AA69B4A2A8C7EF1008A853F /* JosefinSans-Bold.ttf */,
+				8AA69B492A8C7EF1008A853F /* JosefinSans-BoldItalic.ttf */,
+				8AA69B4E2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf */,
+				8AA69B482A8C7EF1008A853F /* JosefinSans-ExtraLightItalic.ttf */,
+				8AA69B452A8C7EF0008A853F /* JosefinSans-Italic.ttf */,
+				8AA69B412A8C7EEF008A853F /* JosefinSans-Light.ttf */,
+				8AA69B422A8C7EF0008A853F /* JosefinSans-LightItalic.ttf */,
+				8AA69B472A8C7EF0008A853F /* JosefinSans-Medium.ttf */,
+				8AA69B462A8C7EF0008A853F /* JosefinSans-MediumItalic.ttf */,
+				8AA69B442A8C7EF0008A853F /* JosefinSans-Regular.ttf */,
+				8AA69B4B2A8C7EF1008A853F /* JosefinSans-SemiBold.ttf */,
+				8AA69B4C2A8C7EF2008A853F /* JosefinSans-SemiBoldItalic.ttf */,
+				8AA69B4D2A8C7EF2008A853F /* JosefinSans-Thin.ttf */,
+				8AA69B432A8C7EF0008A853F /* JosefinSans-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +343,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA69B562A8C7EF2008A853F /* JosefinSans-ExtraLightItalic.ttf in Resources */,
+				8AA69B4F2A8C7EF2008A853F /* JosefinSans-Light.ttf in Resources */,
+				8AA69B5C2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf in Resources */,
+				8AA69B5E2A8C7EFB008A853F /* JosefinSans.ttf in Resources */,
+				8AA69B522A8C7EF2008A853F /* JosefinSans-Regular.ttf in Resources */,
+				8AA69B502A8C7EF2008A853F /* JosefinSans-LightItalic.ttf in Resources */,
 				8AA69AD32A8C5BFC008A853F /* Preview Assets.xcassets in Resources */,
+				8AA69B582A8C7EF2008A853F /* JosefinSans-Bold.ttf in Resources */,
+				8AA69B532A8C7EF2008A853F /* JosefinSans-Italic.ttf in Resources */,
 				8AA69AD02A8C5BFC008A853F /* Assets.xcassets in Resources */,
+				8AA69B512A8C7EF2008A853F /* JosefinSans-ThinItalic.ttf in Resources */,
+				8AA69B592A8C7EF2008A853F /* JosefinSans-SemiBold.ttf in Resources */,
+				8AA69B542A8C7EF2008A853F /* JosefinSans-MediumItalic.ttf in Resources */,
+				8AA69B552A8C7EF2008A853F /* JosefinSans-Medium.ttf in Resources */,
+				8AA69B572A8C7EF2008A853F /* JosefinSans-BoldItalic.ttf in Resources */,
+				8AA69B5A2A8C7EF2008A853F /* JosefinSans-SemiBoldItalic.ttf in Resources */,
+				8AA69B5B2A8C7EF2008A853F /* JosefinSans-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +384,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA69AFD2A8C6115008A853F /* SearchPage.swift in Sources */,
 				8AA69ACE2A8C5BFA008A853F /* ContentView.swift in Sources */,
+				8AA69B0B2A8C7211008A853F /* FieldTheme.swift in Sources */,
 				8AA69ACC2A8C5BFA008A853F /* DarterfishApp.swift in Sources */,
+				8AA69B032A8C6F6D008A853F /* CrimsonTheme.swift in Sources */,
+				8AA69B052A8C7169008A853F /* AquaTheme.swift in Sources */,
+				8AA69B0D2A8C72AF008A853F /* ThemeManager.swift in Sources */,
+				8AA69B072A8C71A6008A853F /* RoyalTheme.swift in Sources */,
+				8AA69AF72A8C6080008A853F /* ExplorePage.swift in Sources */,
+				8AA69AFB2A8C60FC008A853F /* LibraryPage.swift in Sources */,
+				8AA69AF92A8C60F0008A853F /* SocialPage.swift in Sources */,
+				8AA69B012A8C6F08008A853F /* Theme.swift in Sources */,
+				8AA69B092A8C71E5008A853F /* AutumnTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,8 +560,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Darterfish/Preview Content\"";
+				DEVELOPMENT_TEAM = 2VY4N6ZNDC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Darterfish/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,8 +590,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Darterfish/Preview Content\"";
+				DEVELOPMENT_TEAM = 2VY4N6ZNDC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Darterfish/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
