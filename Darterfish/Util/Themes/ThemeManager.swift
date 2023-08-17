@@ -19,3 +19,10 @@ class ThemeManager {
         return self.theme
     }
 }
+
+extension ThemeManager {
+    enum ThemesList: String, CaseIterable, Identifiable {
+        case crimson, aqua, royal, autumn, field
+        var id: Self { self }
+    }
+}

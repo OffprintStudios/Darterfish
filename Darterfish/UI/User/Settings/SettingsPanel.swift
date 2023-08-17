@@ -72,7 +72,7 @@ struct SettingsPanel: View {
                                     .offset(y: fontOffset)
                             }
                         }
-                        NavigationLink(destination: ThemesPanel()) {
+                        NavigationLink(destination: ThemesPanel(iconSize: $iconSize, fontSize: $fontSize, fontOffset: $fontOffset)) {
                             EmptyView()
                         }
                     }

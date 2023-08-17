@@ -8,24 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var theme = ThemeManager.shared.getTheme()
+    @StateObject var userSettings = UserSettings()
     @State private var isSheetPresented = false
-    
-    init() {
-        let appear = UINavigationBarAppearance()
-        let attersLarge: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: "JosefinSans-SemiBold", size: 42)!,
-            .foregroundColor: UIColor(theme.accent)
-        ]
-        let attersSmall: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: "JosefinSans-Regular", size: 20)!
-        ]
-        appear.largeTitleTextAttributes = attersLarge
-        appear.titleTextAttributes = attersSmall
-        
-        UINavigationBar.appearance().standardAppearance = appear
-        UINavigationBar.appearance().compactAppearance = appear
-    }
     
     var body: some View {
         TabView {
@@ -79,9 +63,9 @@ struct ContentView: View {
                 Text("Search")
             }
         }
+        .environmentObject(userSettings)
         .onAppear() {
-            UITabBar.appearance().backgroundColor = UIColor(theme.accent)
-            UITabBar.appearance().unselectedItemTintColor = UIColor(theme.accentLight)
+            self.userSettings.setTheme(CrimsonTheme())
         }
         .onReceive(NotificationCenter.default.publisher(for: NSNotification.Name("OpenUserSheet")), perform: { _ in
             isSheetPresented = true

@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class FieldTheme: Theme {
-    var name = "FieldTheme"
+    static var name = "Field"
     var accent = Color(
         .sRGB,
         red: 79 / 255,

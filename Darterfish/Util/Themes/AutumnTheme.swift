@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class AutumnTheme: Theme {
-    var name = "AutumnTheme"
+    static var name = "Autumn"
     var accent = Color(
         .sRGB,
         red: 204 / 255,

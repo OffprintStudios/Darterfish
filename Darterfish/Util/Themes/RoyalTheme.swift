@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class RoyalTheme: Theme {
-    var name = "RoyalTheme"
+    static var name = "Royal"
     var accent = Color(
         .sRGB,
         red: 145 / 255,

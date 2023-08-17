@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class CrimsonTheme: Theme {
-    var name = "CrimsonTheme"
+    static var name = "Crimson"
     var accent = Color(
         .sRGB,
         red: 205 / 255,

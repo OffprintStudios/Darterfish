@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class AquaTheme: Theme {
-    var name = "AquaTheme"
+    static var name = "Aqua"
     var accent = Color(
         .sRGB,
         red: 98 / 255,

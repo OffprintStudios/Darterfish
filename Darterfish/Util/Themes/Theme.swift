@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 protocol Theme {
-    var name: String { set get }
+    static var name: String { set get }
     var accent: Color { set get }
     var accentDark: Color { set get }
     var accentLight: Color { set get }
