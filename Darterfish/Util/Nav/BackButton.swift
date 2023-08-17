@@ -14,10 +14,13 @@ struct BackButton: ToolbarContent {
         ToolbarItem(placement: .navigation) {
             HStack(spacing: 0) {
                 Image("RemixIcon/Arrows/arrow-left-s-line")
+                    .resizable()
+                    .frame(width: 22.0, height: 22.0)
                 Text("Back")
                     .font(.custom("JosefinSans-Regular", size: 18.0))
                     .offset(y: 2)
             }
+            .offset(x: -8)
             .foregroundStyle(ThemeManager.shared.getTheme().accent)
             .onTapGesture {
                 dismiss()
