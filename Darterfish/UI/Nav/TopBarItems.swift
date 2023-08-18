@@ -19,15 +19,8 @@ struct TopBarItems: ToolbarContent {
                         .foregroundStyle(Color("TextColor"))
                 }
                 
-                Button(action: openActivity) {
-                    Image("RemixIcon/Media/notification-2-line")
-                        .resizable()
-                        .frame(width: 26.0, height: 26.0)
-                        .foregroundStyle(Color("TextColor"))
-                }
-                
-                Button(action: openUser) {
-                    Image("RemixIcon/UserAndFaces/user-5-line")
+                Button(action: openSearch) {
+                    Image("RemixIcon/System/search-eye-line")
                         .resizable()
                         .frame(width: 30.0, height: 30.0)
                         .foregroundStyle(Color("TextColor"))
@@ -40,11 +33,7 @@ struct TopBarItems: ToolbarContent {
         print("Messages Open")
     }
     
-    func openActivity() {
-        print("Activity Open")
-    }
-    
-    func openUser() {
-        NotificationCenter.default.post(name: NSNotification.Name("OpenUserSheet"), object: nil)
+    func openSearch() {
+        print("Search Open")
     }
 }

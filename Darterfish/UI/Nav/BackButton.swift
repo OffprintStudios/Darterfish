@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BackButton: ToolbarContent {
+    @EnvironmentObject var userSettings: UserSettings
     @Environment(\.dismiss) var dismiss
     
     var body: some ToolbarContent {
@@ -21,7 +22,7 @@ struct BackButton: ToolbarContent {
                     .offset(y: 2)
             }
             .offset(x: -8)
-            .foregroundStyle(ThemeManager.shared.getTheme().accent)
+            .foregroundStyle(Color(userSettings.theme.accent))
             .onTapGesture {
                 dismiss()
             }

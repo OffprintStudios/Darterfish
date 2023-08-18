@@ -1,17 +1,17 @@
 //
-//  SearchPage.swift
+//  ActivityPage.swift
 //  Darterfish
 //
-//  Created by Alyx Mote on 8/15/23.
+//  Created by Alyx Mote on 8/17/23.
 //
 
 import SwiftUI
 
-struct SearchPage: View {
+struct ActivityPage: View {
     var body: some View {
         VStack {
-            Image("RemixIcon/System/search-eye-line")
-            Text("Search Page")
+            Image("RemixIcon/Media/notification-2-line")
+            Text("Activity Page")
                 .font(Font.custom("JosefinSans-Regular", size: 18))
         }
         .padding()

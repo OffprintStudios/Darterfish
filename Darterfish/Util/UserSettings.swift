@@ -5,37 +5,45 @@
 //  Created by Alyx Mote on 8/16/23.
 //
 
-import Foundation
 import SwiftUI
 
 class UserSettings: ObservableObject {
-    @Published var theme: Theme = CrimsonTheme()
-    
-    func setTheme(_ newTheme: Theme) {
-        print("Setting new theme")
-        theme = newTheme
-        let appear = UINavigationBarAppearance()
-        let attersLarge: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: "JosefinSans-SemiBold", size: 42)!,
-            .foregroundColor: UIColor(theme.accent)
-        ]
-        let attersSmall: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: "JosefinSans-Regular", size: 20)!
-        ]
-        appear.largeTitleTextAttributes = attersLarge
-        appear.titleTextAttributes = attersSmall
-        
-        UINavigationBar.appearance().standardAppearance = appear
-        UINavigationBar.appearance().compactAppearance = appear
-        
-        UITabBar.appearance().backgroundColor = UIColor(theme.accent)
-        UITabBar.appearance().unselectedItemTintColor = UIColor(theme.accentLight)
+    /* Stored Properties */
+    @AppStorage("theme") var storedTheme = "crimson" {
+        didSet {
+            updateTheme()
+        }
     }
-}
-
-extension UserSettings {
-    enum ThemesList: String, CaseIterable, Identifiable {
-        case crimson, aqua, royal, autumn, field
-        var id: Self { self }
+    @AppStorage("colorScheme") var storedBrightness = "none" {
+        didSet {
+            updateBrightness()
+        }
+    }
+    
+    /* Published Properties */
+    @Published var theme: Theme = Crimson()
+    @Published var colorScheme: ColorScheme? = .light
+    
+    /* Other Properties */
+    
+    /* Functions */
+    func updateTheme() {
+        theme = ThemeManager.getTheme(storedTheme)
+    }
+    
+    func updateBrightness() {
+        colorScheme = if storedBrightness == "light" {
+            .light
+        } else if storedBrightness == "dark" {
+            .dark
+        } else {
+            nil
+        }
+    }
+    
+    /* Initialization */
+    init() {
+        updateTheme()
+        updateBrightness()
     }
 }

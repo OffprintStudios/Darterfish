@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1189EA2A8F0FDA00614F1D /* TabNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1189E92A8F0FDA00614F1D /* TabNav.swift */; };
+		8A665AC42A8F00CB00F64607 /* ThemeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A665AC32A8F00CB00F64607 /* ThemeDefinitions.swift */; };
 		8A6F82ED2A8C965300FEFD60 /* TopBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F82EC2A8C965300FEFD60 /* TopBarItems.swift */; };
 		8A6F82F02A8C98F300FEFD60 /* UserSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F82EF2A8C98F300FEFD60 /* UserSheet.swift */; };
 		8A6F82F22A8D274800FEFD60 /* SettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F82F12A8D274800FEFD60 /* SettingsPanel.swift */; };
@@ -30,11 +32,6 @@
 		8AA69AFB2A8C60FC008A853F /* LibraryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69AFA2A8C60FC008A853F /* LibraryPage.swift */; };
 		8AA69AFD2A8C6115008A853F /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69AFC2A8C6115008A853F /* SearchPage.swift */; };
 		8AA69B012A8C6F08008A853F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B002A8C6F08008A853F /* Theme.swift */; };
-		8AA69B032A8C6F6D008A853F /* CrimsonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B022A8C6F6D008A853F /* CrimsonTheme.swift */; };
-		8AA69B052A8C7169008A853F /* AquaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B042A8C7169008A853F /* AquaTheme.swift */; };
-		8AA69B072A8C71A6008A853F /* RoyalTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B062A8C71A6008A853F /* RoyalTheme.swift */; };
-		8AA69B092A8C71E5008A853F /* AutumnTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B082A8C71E5008A853F /* AutumnTheme.swift */; };
-		8AA69B0B2A8C7211008A853F /* FieldTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B0A2A8C7211008A853F /* FieldTheme.swift */; };
 		8AA69B0D2A8C72AF008A853F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA69B0C2A8C72AF008A853F /* ThemeManager.swift */; };
 		8AA69B4F2A8C7EF2008A853F /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B412A8C7EEF008A853F /* JosefinSans-Light.ttf */; };
 		8AA69B502A8C7EF2008A853F /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B422A8C7EF0008A853F /* JosefinSans-LightItalic.ttf */; };
@@ -51,6 +48,7 @@
 		8AA69B5B2A8C7EF2008A853F /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4D2A8C7EF2008A853F /* JosefinSans-Thin.ttf */; };
 		8AA69B5C2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4E2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf */; };
 		8AA69B5E2A8C7EFB008A853F /* JosefinSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B5D2A8C7EFB008A853F /* JosefinSans.ttf */; };
+		8ADF86472A8F29E500DC2B71 /* ActivityPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF86462A8F29E500DC2B71 /* ActivityPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A1189E92A8F0FDA00614F1D /* TabNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNav.swift; sourceTree = "<group>"; };
+		8A665AC32A8F00CB00F64607 /* ThemeDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDefinitions.swift; sourceTree = "<group>"; };
 		8A6F82EC2A8C965300FEFD60 /* TopBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarItems.swift; sourceTree = "<group>"; };
 		8A6F82EF2A8C98F300FEFD60 /* UserSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSheet.swift; sourceTree = "<group>"; };
 		8A6F82F12A8D274800FEFD60 /* SettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPanel.swift; sourceTree = "<group>"; };
@@ -96,11 +96,6 @@
 		8AA69AFA2A8C60FC008A853F /* LibraryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPage.swift; sourceTree = "<group>"; };
 		8AA69AFC2A8C6115008A853F /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		8AA69B002A8C6F08008A853F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		8AA69B022A8C6F6D008A853F /* CrimsonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimsonTheme.swift; sourceTree = "<group>"; };
-		8AA69B042A8C7169008A853F /* AquaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaTheme.swift; sourceTree = "<group>"; };
-		8AA69B062A8C71A6008A853F /* RoyalTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoyalTheme.swift; sourceTree = "<group>"; };
-		8AA69B082A8C71E5008A853F /* AutumnTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutumnTheme.swift; sourceTree = "<group>"; };
-		8AA69B0A2A8C7211008A853F /* FieldTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTheme.swift; sourceTree = "<group>"; };
 		8AA69B0C2A8C72AF008A853F /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		8AA69B132A8C7464008A853F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8AA69B412A8C7EEF008A853F /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Light.ttf"; sourceTree = "<group>"; };
@@ -118,6 +113,7 @@
 		8AA69B4D2A8C7EF2008A853F /* JosefinSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Thin.ttf"; sourceTree = "<group>"; };
 		8AA69B4E2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-ExtraLight.ttf"; sourceTree = "<group>"; };
 		8AA69B5D2A8C7EFB008A853F /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
+		8ADF86462A8F29E500DC2B71 /* ActivityPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +147,7 @@
 			children = (
 				8A6F82EC2A8C965300FEFD60 /* TopBarItems.swift */,
 				8A6F82FD2A8D389A00FEFD60 /* BackButton.swift */,
+				8A1189E92A8F0FDA00614F1D /* TabNav.swift */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -187,6 +184,7 @@
 		8A8271222A8DBA8500E24A3E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8AA69AFF2A8C6EFE008A853F /* Themes */,
 				8A6F82EB2A8C963E00FEFD60 /* Nav */,
 				8A6F82EE2A8C98E200FEFD60 /* User */,
 			);
@@ -261,6 +259,7 @@
 				8AA69AF82A8C60F0008A853F /* SocialPage.swift */,
 				8AA69AFA2A8C60FC008A853F /* LibraryPage.swift */,
 				8AA69AFC2A8C6115008A853F /* SearchPage.swift */,
+				8ADF86462A8F29E500DC2B71 /* ActivityPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -268,7 +267,6 @@
 		8AA69AFE2A8C6EF8008A853F /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				8AA69AFF2A8C6EFE008A853F /* Themes */,
 				8A8271202A8DB9C500E24A3E /* Functions.swift */,
 				8A8271232A8DCC6000E24A3E /* UserSettings.swift */,
 			);
@@ -279,12 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				8AA69B002A8C6F08008A853F /* Theme.swift */,
-				8AA69B022A8C6F6D008A853F /* CrimsonTheme.swift */,
-				8AA69B042A8C7169008A853F /* AquaTheme.swift */,
-				8AA69B062A8C71A6008A853F /* RoyalTheme.swift */,
-				8AA69B082A8C71E5008A853F /* AutumnTheme.swift */,
-				8AA69B0A2A8C7211008A853F /* FieldTheme.swift */,
 				8AA69B0C2A8C72AF008A853F /* ThemeManager.swift */,
+				8A665AC32A8F00CB00F64607 /* ThemeDefinitions.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -464,26 +458,24 @@
 			files = (
 				8AA69AFD2A8C6115008A853F /* SearchPage.swift in Sources */,
 				8AA69ACE2A8C5BFA008A853F /* ContentView.swift in Sources */,
-				8AA69B0B2A8C7211008A853F /* FieldTheme.swift in Sources */,
+				8ADF86472A8F29E500DC2B71 /* ActivityPage.swift in Sources */,
 				8AA69ACC2A8C5BFA008A853F /* DarterfishApp.swift in Sources */,
-				8AA69B032A8C6F6D008A853F /* CrimsonTheme.swift in Sources */,
 				8A6F82FE2A8D389A00FEFD60 /* BackButton.swift in Sources */,
-				8AA69B052A8C7169008A853F /* AquaTheme.swift in Sources */,
 				8AA69B0D2A8C72AF008A853F /* ThemeManager.swift in Sources */,
 				8A6F82F02A8C98F300FEFD60 /* UserSheet.swift in Sources */,
 				8A6F82F62A8D2FAA00FEFD60 /* AboutPanel.swift in Sources */,
 				8A6F82FA2A8D2FC400FEFD60 /* FiltersPanel.swift in Sources */,
 				8A6F82FC2A8D2FD200FEFD60 /* ThemesPanel.swift in Sources */,
-				8AA69B072A8C71A6008A853F /* RoyalTheme.swift in Sources */,
 				8A6F82ED2A8C965300FEFD60 /* TopBarItems.swift in Sources */,
 				8AA69AF72A8C6080008A853F /* ExplorePage.swift in Sources */,
+				8A1189EA2A8F0FDA00614F1D /* TabNav.swift in Sources */,
+				8A665AC42A8F00CB00F64607 /* ThemeDefinitions.swift in Sources */,
 				8A8271242A8DCC6000E24A3E /* UserSettings.swift in Sources */,
 				8A8271212A8DB9C500E24A3E /* Functions.swift in Sources */,
 				8AA69AFB2A8C60FC008A853F /* LibraryPage.swift in Sources */,
 				8AA69AF92A8C60F0008A853F /* SocialPage.swift in Sources */,
 				8A6F82F82A8D2FB900FEFD60 /* LocalizationPanel.swift in Sources */,
 				8AA69B012A8C6F08008A853F /* Theme.swift in Sources */,
-				8AA69B092A8C71E5008A853F /* AutumnTheme.swift in Sources */,
 				8A6F82F22A8D274800FEFD60 /* SettingsPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,75 +8,73 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var userSettings = UserSettings()
+    @EnvironmentObject var userSettings: UserSettings
     @State private var isSheetPresented = false
+    @State private var currTabPage = Tabs.explore
+    
+    init() {
+        let appear = UINavigationBarAppearance()
+        let attersLarge: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "JosefinSans-SemiBold", size: 42)!
+        ]
+        let attersSmall: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "JosefinSans-Regular", size: 20)!
+        ]
+        appear.largeTitleTextAttributes = attersLarge
+        appear.titleTextAttributes = attersSmall
+        
+        UINavigationBar.appearance().standardAppearance = appear
+        UINavigationBar.appearance().compactAppearance = appear
+    }
     
     var body: some View {
-        TabView {
-            NavigationView {
-                ZStack {
-                    Color("BackgroundColor").ignoresSafeArea()
-                    ExplorePage()
-                        .navigationTitle("Explore")
-                        .navigationBarTitleDisplayMode(.large)
-                        .toolbar { TopBarItems() }
+        VStack(spacing: 0) {
+            NavigationStack {
+                if currTabPage == .explore {
+                    ZStack {
+                        Color("BackgroundColor").ignoresSafeArea()
+                        ExplorePage()
+                            .navigationTitle("Explore")
+                            .navigationBarTitleDisplayMode(.large)
+                            .toolbar { TopBarItems() }
+                    }
+                } else if currTabPage == .social {
+                    ZStack {
+                        Color("BackgroundColor").ignoresSafeArea()
+                        SocialPage()
+                            .navigationTitle("Social")
+                            .navigationBarTitleDisplayMode(.large)
+                            .toolbar { TopBarItems() }
+                    }
+                } else if currTabPage == .library {
+                    ZStack {
+                        Color("BackgroundColor").ignoresSafeArea()
+                        LibraryPage()
+                            .navigationTitle("Library")
+                            .navigationBarTitleDisplayMode(.large)
+                            .toolbar { TopBarItems() }
+                    }
+                } else if currTabPage == .activity {
+                    ZStack {
+                        Color("BackgroundColor").ignoresSafeArea()
+                        ActivityPage()
+                    }
                 }
-            }
-            .tabItem {
-                Image("RemixIcon/Map/compass-discover-line")
-                Text("Explore")
             }
             
-            NavigationView {
-                ZStack {
-                    Color("BackgroundColor").ignoresSafeArea()
-                    SocialPage()
-                        .navigationTitle("Social")
-                        .navigationBarTitleDisplayMode(.large)
-                        .toolbar { TopBarItems() }
-                }
-            }.tabItem {
-                Image("RemixIcon/UserAndFaces/team-line")
-                Text("Social")
-            }
-            
-            NavigationView {
-                ZStack {
-                    Color("BackgroundColor").ignoresSafeArea()
-                    LibraryPage()
-                        .navigationTitle("Library")
-                        .navigationBarTitleDisplayMode(.large)
-                        .toolbar { TopBarItems() }
-                }
-            }.tabItem {
-                Image("RemixIcon/Business/bookmark-line")
-                Text("Library")
-            }
-            
-            NavigationView {
-                ZStack {
-                    Color("BackgroundColor").ignoresSafeArea()
-                    SearchPage()
-                }
-            }.tabItem {
-                Image("RemixIcon/System/search-eye-line")
-                Text("Search")
-            }
-        }
-        .environmentObject(userSettings)
-        .onAppear() {
-            self.userSettings.setTheme(CrimsonTheme())
+            TabNav(currTab: $currTabPage)
         }
         .onReceive(NotificationCenter.default.publisher(for: NSNotification.Name("OpenUserSheet")), perform: { _ in
             isSheetPresented = true
         })
-        .tint(.white)
         .sheet(isPresented: $isSheetPresented) {
             UserSheet(isPresented: $isSheetPresented)
         }
+        .preferredColorScheme(userSettings.colorScheme)
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(UserSettings())
 }

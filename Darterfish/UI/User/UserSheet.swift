@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UserSheet: View {
+    @EnvironmentObject var userSettings: UserSettings
     @Binding var isPresented: Bool
     @State private var iconSize: CGFloat = 22.0
     @State private var fontSize: CGFloat = 18.0
@@ -58,16 +59,15 @@ struct UserSheet: View {
                     }
                 }
             }
-            .navigationTitle("Profile & Settings")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden()
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .principal) {
                     Button(action: closeSheet) {
-                        Image("RemixIcon/System/close-circle-line")
+                        Image("RemixIcon/Arrows/arrow-down-s-line")
                             .resizable()
                             .frame(width: 26.0, height: 26.0)
-                            .foregroundStyle(ThemeManager.shared.getTheme().accent)
+                            .foregroundStyle(Color(userSettings.theme.accent))
                     }
                 }
             }

@@ -12,6 +12,7 @@ struct DarterfishApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(UserSettings())
         }
     }
 }
