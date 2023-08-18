@@ -216,12 +216,12 @@
 			children = (
 				8A8271222A8DBA8500E24A3E /* UI */,
 				8AA69B142A8C7525008A853F /* Fonts */,
-				8AA69B132A8C7464008A853F /* Info.plist */,
 				8AA69AFE2A8C6EF8008A853F /* Util */,
 				8AA69AF52A8C6072008A853F /* Pages */,
 				8AA69ACB2A8C5BFA008A853F /* DarterfishApp.swift */,
 				8AA69ACD2A8C5BFA008A853F /* ContentView.swift */,
 				8AA69ACF2A8C5BFC008A853F /* Assets.xcassets */,
+				8AA69B132A8C7464008A853F /* Info.plist */,
 				8AA69AD12A8C5BFC008A853F /* Preview Content */,
 			);
 			path = Darterfish;
