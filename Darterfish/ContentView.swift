@@ -44,7 +44,6 @@ struct ContentView: View {
                         SocialPage()
                             .navigationTitle("Social")
                             .navigationBarTitleDisplayMode(.large)
-                            .toolbar { TopBarItems() }
                     }
                 } else if currTabPage == .library {
                     ZStack {
@@ -52,7 +51,6 @@ struct ContentView: View {
                         LibraryPage()
                             .navigationTitle("Library")
                             .navigationBarTitleDisplayMode(.large)
-                            .toolbar { TopBarItems() }
                     }
                 } else if currTabPage == .activity {
                     ZStack {
@@ -69,8 +67,9 @@ struct ContentView: View {
         })
         .sheet(isPresented: $isSheetPresented) {
             UserSheet(isPresented: $isSheetPresented)
+                .preferredColorScheme(userSettings.darkMode)
         }
-        .preferredColorScheme(userSettings.colorScheme)
+        .preferredColorScheme(userSettings.darkMode)
     }
 }
 

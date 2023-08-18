@@ -13,6 +13,7 @@ struct ThemesPanel: View {
     @Binding var fontSize: CGFloat
     @Binding var fontOffset: CGFloat
     @State var selectedTheme = "crimson"
+    let brightnessButtonSize = 84.0
     
     var body: some View {
         List {
@@ -53,42 +54,69 @@ struct ThemesPanel: View {
             Section("Brightness") {
                 HStack(alignment: .center, spacing: 15) {
                     Spacer()
-                    Button(action: { userSettings.storedBrightness = "light" }) {
-                        VStack(alignment: .center) {
-                            Image("RemixIcon/Weather/sun-line")
-                            Text("Lights On")
-                                .textCase(.uppercase)
-                                .font(.caption)
-                                .bold()
-                        }
+                    VStack(alignment: .center) {
+                        Image("RemixIcon/Weather/sun-line")
+                        Text("Lights On")
+                            .textCase(.uppercase)
+                            .font(.caption)
+                            .bold()
                     }
-                    .frame(width: 75, height: 75)
-                    .foregroundStyle(Color.white)
+                    .frame(width: brightnessButtonSize, height: brightnessButtonSize)
+                    .background(
+                        RoundedRectangle(cornerRadius: 15, style: .continuous)
+                            .fill((userSettings.storedDarkMode == "light" ? Color(userSettings.theme.accent) : Color.clear))
+                    )
+                    .foregroundStyle(userSettings.storedDarkMode == "light" ? Color.white : Color.text)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.secondary, lineWidth: 2)
+                    )
+                    .onTapGesture {
+                        userSettings.storedDarkMode = "light"
+                    }
                     
-                    Button(action: { userSettings.storedBrightness = "dark" }) {
-                        VStack(alignment: .center) {
-                            Image("RemixIcon/Weather/moon-line")
-                            Text("Lights Off")
-                                .textCase(.uppercase)
-                                .font(.caption)
-                                .bold()
-                        }
+                    VStack(alignment: .center) {
+                        Image("RemixIcon/Weather/moon-line")
+                        Text("Lights Off")
+                            .textCase(.uppercase)
+                            .font(.caption)
+                            .bold()
                     }
-                    .frame(width: 75, height: 75)
-                    .foregroundStyle(Color.white)
+                    .frame(width: brightnessButtonSize, height: brightnessButtonSize)
+                    .background(
+                        RoundedRectangle(cornerRadius: 15, style: .continuous)
+                            .fill((userSettings.storedDarkMode == "dark" ? Color(userSettings.theme.accent) : Color.clear))
+                    )
+                    .foregroundStyle(userSettings.storedDarkMode == "dark" ? Color.white : Color.text)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.secondary, lineWidth: 2)
+                    )
+                    .onTapGesture {
+                        userSettings.storedDarkMode = "dark"
+                    }
                     
-                    Divider()
-                    Button(action: { userSettings.storedBrightness = "none" }) {
-                        VStack(alignment: .center) {
-                            Image("RemixIcon/Device/computer-line")
-                            Text("System")
-                                .textCase(.uppercase)
-                                .font(.caption)
-                                .bold()
-                        }
+                    VStack(alignment: .center) {
+                        Image("RemixIcon/Device/computer-line")
+                        Text("System")
+                            .textCase(.uppercase)
+                            .font(.caption)
+                            .bold()
                     }
-                    .frame(width: 75, height: 75)
-                    .foregroundStyle(Color.white)
+                    .frame(width: brightnessButtonSize, height: brightnessButtonSize)
+                    .foregroundStyle(userSettings.storedDarkMode == "nil" ? Color.white : Color.text)
+                    .background(
+                        RoundedRectangle(cornerRadius: 15, style: .continuous)
+                            .fill((userSettings.storedDarkMode == "nil" ? Color(userSettings.theme.accent) : Color.clear))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.secondary, lineWidth: 2)
+                    )
+                    .onTapGesture {
+                        userSettings.storedDarkMode = "nil"
+                    }
+                    
                     Spacer()
                 }
             }
@@ -97,6 +125,12 @@ struct ThemesPanel: View {
         .toolbar { BackButton() }
         .onAppear() {
             selectedTheme = (ThemeManager.getTheme(userSettings.theme.name)).name
+        }
+    }
+    
+    func toggleDarkMode(_ darkMode: String) -> () -> Void {
+        return {
+            userSettings.storedDarkMode = darkMode
         }
     }
 }

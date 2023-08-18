@@ -14,15 +14,15 @@ class UserSettings: ObservableObject {
             updateTheme()
         }
     }
-    @AppStorage("colorScheme") var storedBrightness = "none" {
+    @AppStorage("darkMode") var storedDarkMode = "nil" {
         didSet {
-            updateBrightness()
+            updateDarkMode()
         }
     }
     
     /* Published Properties */
     @Published var theme: Theme = Crimson()
-    @Published var colorScheme: ColorScheme? = .light
+    @Published var darkMode: ColorScheme? = nil
     
     /* Other Properties */
     
@@ -31,19 +31,23 @@ class UserSettings: ObservableObject {
         theme = ThemeManager.getTheme(storedTheme)
     }
     
-    func updateBrightness() {
-        colorScheme = if storedBrightness == "light" {
-            .light
-        } else if storedBrightness == "dark" {
-            .dark
-        } else {
-            nil
+    func updateDarkMode() {
+        switch storedDarkMode {
+        case "light":
+            darkMode = .light
+            break
+        case "dark":
+            darkMode = .dark
+            break
+        default:
+            darkMode = nil
+            break
         }
     }
     
     /* Initialization */
     init() {
         updateTheme()
-        updateBrightness()
+        updateDarkMode()
     }
 }

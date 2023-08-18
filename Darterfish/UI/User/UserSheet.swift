@@ -72,6 +72,7 @@ struct UserSheet: View {
                 }
             }
         }
+        .preferredColorScheme(userSettings.darkMode)
     }
     
     func closeSheet() {

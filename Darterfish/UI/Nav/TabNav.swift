@@ -22,6 +22,8 @@ struct TabNav: View {
     
     var body: some View {
         HStack(alignment: .center) {
+            Spacer()
+            
             GeometryReader { geo in
                 VStack(alignment: .center) {
                     Image("RemixIcon/Map/compass-discover-line")
@@ -121,6 +123,8 @@ struct TabNav: View {
             .onTapGesture {
                 currTab = .activity
             }
+            
+            Spacer()
         }
         .background(Color(userSettings.theme.accent))
         .frame(height: 68)
