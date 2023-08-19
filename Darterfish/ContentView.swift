@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var userSettings: UserSettings
     @State private var isSheetPresented = false
-    @State private var currTabPage = Tabs.explore
+    @State private var tabState = TabNav.TabState(currTab: .explore, transitionIsForward: true)
     
     init() {
         let appear = UINavigationBarAppearance()
@@ -29,19 +29,23 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            if currTabPage == .explore {
-                ExplorePage()
-            } else if currTabPage == .social {
-                SocialPage()
-            } else if currTabPage == .library {
-                LibraryPage()
-            } else if currTabPage == .activity {
-                ActivityPage()
+            Group {
+                if tabState.currTab == .explore {
+                    ExplorePage()
+                } else if tabState.currTab == .social {
+                    SocialPage()
+                } else if tabState.currTab == .library {
+                    LibraryPage()
+                } else if tabState.currTab == .activity {
+                    ActivityPage()
+                }
             }
+            .transition(.dynamicSlide(forward: $tabState.transitionIsForward))
+            .animation(.default, value: tabState.currTab)
             
-            TabNav(currTab: $currTabPage)
+            TabNav(tabState: $tabState)
         }
-        .animation(.easeInOut(duration: 0.25), value: currTabPage)
+        
         .onReceive(NotificationCenter.default.publisher(for: NSNotification.Name("OpenUserSheet")), perform: { _ in
             isSheetPresented = true
         })
@@ -50,6 +54,7 @@ struct ContentView: View {
                 .preferredColorScheme(userSettings.darkMode)
         }
         .preferredColorScheme(userSettings.darkMode)
+        .background(Color("BackgroundColor"))
     }
 }
 

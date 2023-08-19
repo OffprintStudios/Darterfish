@@ -7,16 +7,9 @@
 
 import SwiftUI
 
-enum Tabs: Int {
-    case explore = 0
-    case social = 1
-    case library = 2
-    case activity = 3
-}
-
 struct TabNav: View {
     @EnvironmentObject var userSettings: UserSettings
-    @Binding var currTab: Tabs
+    @Binding var tabState: TabState
     @State var guideSheetOpen = false
     let iconSize = 30.0
     
@@ -37,12 +30,12 @@ struct TabNav: View {
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
                     .padding(.top, geo.size.height * 0.8)
-                    .opacity(currTab == .explore ? 1.0 : 0.0)
+                    .opacity(tabState.currTab == .explore ? 1.0 : 0.0)
             }
-            .foregroundStyle(currTab == .explore ? Color.white : Color(userSettings.theme.accentLight))
+            .foregroundStyle(tabState.currTab == .explore ? Color.white : Color(userSettings.theme.accentLight))
             .onTapGesture {
                 withAnimation(.spring(duration: 0.25)) {
-                    currTab = .explore
+                    tabState.currTab = .explore
                 }
             }
             
@@ -59,12 +52,12 @@ struct TabNav: View {
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
                     .padding(.top, geo.size.height * 0.8)
-                    .opacity(currTab == .social ? 1.0 : 0.0)
+                    .opacity(tabState.currTab == .social ? 1.0 : 0.0)
             }
-            .foregroundStyle(currTab == .social ? Color.white : Color(userSettings.theme.accentLight))
+            .foregroundStyle(tabState.currTab == .social ? Color.white : Color(userSettings.theme.accentLight))
             .onTapGesture {
                 withAnimation(.spring(duration: 0.25)) {
-                    currTab = .social
+                    tabState.currTab = .social
                 }
             }
             
@@ -97,12 +90,12 @@ struct TabNav: View {
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
                     .padding(.top, geo.size.height * 0.8)
-                    .opacity(currTab == .library ? 1.0 : 0.0)
+                    .opacity(tabState.currTab == .library ? 1.0 : 0.0)
             }
-            .foregroundStyle(currTab == .library ? Color.white : Color(userSettings.theme.accentLight))
+            .foregroundStyle(tabState.currTab == .library ? Color.white : Color(userSettings.theme.accentLight))
             .onTapGesture {
                 withAnimation(.spring(duration: 0.25)) {
-                    currTab = .library
+                    tabState.currTab = .library
                 }
             }
             
@@ -119,12 +112,12 @@ struct TabNav: View {
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
                     .padding(.top, geo.size.height * 0.8)
-                    .opacity(currTab == .activity ? 1.0 : 0.0)
+                    .opacity(tabState.currTab == .activity ? 1.0 : 0.0)
             }
-            .foregroundStyle(currTab == .activity ? Color.white : Color(userSettings.theme.accentLight))
+            .foregroundStyle(tabState.currTab == .activity ? Color.white : Color(userSettings.theme.accentLight))
             .onTapGesture {
                 withAnimation(.spring(duration: 0.25)) {
-                    currTab = .activity
+                    tabState.currTab = .activity
                 }
             }
             
@@ -133,5 +126,21 @@ struct TabNav: View {
         .background(Color(userSettings.theme.accent))
         .frame(height: 68)
         .ignoresSafeArea()
+    }
+}
+
+extension TabNav {
+    struct TabState {
+        var currTab: Tabs
+        var transitionIsForward: Bool
+    }
+    
+    enum Tabs: Int {
+        case explore = 0
+        case social = 1
+        case library = 2
+        case activity = 3
+        
+        static let directionIsForward = true
     }
 }
