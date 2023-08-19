@@ -98,29 +98,6 @@ struct ExplorePage: View {
                         }
                         .padding()
                         
-                        Section {
-                            VStack {
-                                HStack {
-                                    Image("RemixIcon/Map/signal-tower-line")
-                                        .resizable()
-                                        .frame(width: iconSize, height: iconSize)
-                                    Text("Recently Updated")
-                                        .font(.custom("JosefinSans-SemiBold", size: 24))
-                                        .offset(y: 2)
-                                    Spacer()
-                                    ZStack {
-                                        Image("RemixIcon/Arrows/arrow-right-s-line")
-                                            .resizable()
-                                            .frame(width: iconSize, height: iconSize)
-                                    }
-                                }
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(Color.gray.opacity(0.25))
-                                    .frame(height: 250)
-                            }
-                        }
-                        .padding()
-                        
                         Spacer()
                     }
                     GeometryReader { geo in
