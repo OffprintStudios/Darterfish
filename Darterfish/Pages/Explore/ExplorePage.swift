@@ -45,16 +45,19 @@ struct ExplorePage: View {
                                                             .offset(y: -12)
                                                         }
                                                         .frame(width: proxy.size.width, height: proxy.size.height / 3)
-                                                        .background(.thinMaterial.opacity(0.5))
+                                                        .background(.ultraThinMaterial.opacity(0.75))
                                                     }
                                             } else if phase.error != nil {
-                                                Color.red
                                                 Image("RemixIcon/System/close-circle-line")
+                                                    .resizable()
+                                                    .frame(width: 75, height: 75)
                                                     .foregroundStyle(Color.white)
                                             } else {
                                                 ZStack {
-                                                    Color.gray
                                                     Image("RemixIcon/Media/image-line")
+                                                        .resizable()
+                                                        .frame(width: 75, height: 75)
+                                                        .foregroundStyle(Color.white)
                                                 }
                                             }
                                         }
@@ -64,6 +67,7 @@ struct ExplorePage: View {
                                 .ignoresSafeArea(.all)
                                 .clipped()
                                 .frame(width: proxy.size.width, height: proxy.size.height + 100)
+                                .background(Color(userSettings.theme.accent))
                                 .offset(y: -100)
                                 .introspect(.scrollView, on: .iOS(.v13, .v14, .v15, .v16, .v17)) { scrollView in
                                     scrollView.bounces = false

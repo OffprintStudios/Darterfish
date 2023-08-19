@@ -41,6 +41,7 @@ struct ContentView: View {
             
             TabNav(currTab: $currTabPage)
         }
+        .animation(.easeInOut(duration: 0.25), value: currTabPage)
         .onReceive(NotificationCenter.default.publisher(for: NSNotification.Name("OpenUserSheet")), perform: { _ in
             isSheetPresented = true
         })

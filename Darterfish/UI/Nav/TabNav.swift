@@ -32,17 +32,18 @@ struct TabNav: View {
                 }
                 .frame(width: geo.size.width, height: geo.size.height)
                 
-                if currTab == .explore {
-                    RoundedRectangle(cornerRadius: 4)
-                        .foregroundStyle(Color.white)
-                        .frame(width: geo.size.width / 2, height: 4)
-                        .padding(.leading, geo.size.width / 4)
-                        .padding(.top, geo.size.height * 0.8)
-                }
+                RoundedRectangle(cornerRadius: 4)
+                    .foregroundStyle(Color.white)
+                    .frame(width: geo.size.width / 2, height: 4)
+                    .padding(.leading, geo.size.width / 4)
+                    .padding(.top, geo.size.height * 0.8)
+                    .opacity(currTab == .explore ? 1.0 : 0.0)
             }
             .foregroundStyle(currTab == .explore ? Color.white : Color(userSettings.theme.accentLight))
             .onTapGesture {
-                currTab = .explore
+                withAnimation(.spring(duration: 0.25)) {
+                    currTab = .explore
+                }
             }
             
             GeometryReader { geo in
@@ -53,17 +54,18 @@ struct TabNav: View {
                 }
                 .frame(width: geo.size.width, height: geo.size.height)
                 
-                if currTab == .social {
-                    RoundedRectangle(cornerRadius: 4)
-                        .foregroundStyle(Color.white)
-                        .frame(width: geo.size.width / 2, height: 4)
-                        .padding(.leading, geo.size.width / 4)
-                        .padding(.top, geo.size.height * 0.8)
-                }
+                RoundedRectangle(cornerRadius: 4)
+                    .foregroundStyle(Color.white)
+                    .frame(width: geo.size.width / 2, height: 4)
+                    .padding(.leading, geo.size.width / 4)
+                    .padding(.top, geo.size.height * 0.8)
+                    .opacity(currTab == .social ? 1.0 : 0.0)
             }
             .foregroundStyle(currTab == .social ? Color.white : Color(userSettings.theme.accentLight))
             .onTapGesture {
-                currTab = .social
+                withAnimation(.spring(duration: 0.25)) {
+                    currTab = .social
+                }
             }
             
             GeometryReader { geo in
@@ -90,17 +92,18 @@ struct TabNav: View {
                 }
                 .frame(width: geo.size.width, height: geo.size.height)
                 
-                if currTab == .library {
-                    RoundedRectangle(cornerRadius: 4)
-                        .foregroundStyle(Color.white)
-                        .frame(width: geo.size.width / 2, height: 4)
-                        .padding(.leading, geo.size.width / 4)
-                        .padding(.top, geo.size.height * 0.8)
-                }
+                RoundedRectangle(cornerRadius: 4)
+                    .foregroundStyle(Color.white)
+                    .frame(width: geo.size.width / 2, height: 4)
+                    .padding(.leading, geo.size.width / 4)
+                    .padding(.top, geo.size.height * 0.8)
+                    .opacity(currTab == .library ? 1.0 : 0.0)
             }
             .foregroundStyle(currTab == .library ? Color.white : Color(userSettings.theme.accentLight))
             .onTapGesture {
-                currTab = .library
+                withAnimation(.spring(duration: 0.25)) {
+                    currTab = .library
+                }
             }
             
             GeometryReader { geo in
@@ -111,17 +114,18 @@ struct TabNav: View {
                 }
                 .frame(width: geo.size.width, height: geo.size.height)
                 
-                if currTab == .activity {
-                    RoundedRectangle(cornerRadius: 4)
-                        .foregroundStyle(Color.white)
-                        .frame(width: geo.size.width / 2, height: 4)
-                        .padding(.leading, geo.size.width / 4)
-                        .padding(.top, geo.size.height * 0.8)
-                }
+                RoundedRectangle(cornerRadius: 4)
+                    .foregroundStyle(Color.white)
+                    .frame(width: geo.size.width / 2, height: 4)
+                    .padding(.leading, geo.size.width / 4)
+                    .padding(.top, geo.size.height * 0.8)
+                    .opacity(currTab == .activity ? 1.0 : 0.0)
             }
             .foregroundStyle(currTab == .activity ? Color.white : Color(userSettings.theme.accentLight))
             .onTapGesture {
-                currTab = .activity
+                withAnimation(.spring(duration: 0.25)) {
+                    currTab = .activity
+                }
             }
             
             Spacer()
