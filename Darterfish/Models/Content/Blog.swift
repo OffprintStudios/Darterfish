@@ -26,9 +26,9 @@ struct Blog: Codable, Identifiable {
 
 extension Blog {
     struct Stats: Codable {
-        var words: Int
-        var views: Int
-        var comments: Int
-        var favorites: Int
+        var words: Int64
+        var views: Int64
+        var comments: Int64
+        var favorites: Int64
     }
 }

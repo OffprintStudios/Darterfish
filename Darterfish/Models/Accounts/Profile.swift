@@ -9,7 +9,7 @@ import Foundation
 
 struct Profile: Codable, Identifiable {
     let id: String
-    let account: AccountInfo
+    let account: AccountInfo?
     var username: String
     var avatar: String
     var bannerArt: String?
@@ -23,7 +23,7 @@ struct Profile: Codable, Identifiable {
 extension Profile {
     struct AccountInfo: Codable {
         let id: String
-        let roles: [Roles]
+        let roles: [Roles]?
     }
     
     struct Info: Codable {
@@ -33,9 +33,9 @@ extension Profile {
     }
     
     struct Stats: Codable {
-        var works: Int
-        var blogs: Int
-        var followers: Int
-        var following: Int
+        var works: Int64
+        var blogs: Int64
+        var followers: Int64
+        var following: Int64
     }
 }

@@ -5,15 +5,17 @@
 //  Created by Alyx Mote on 8/15/23.
 //
 
+import Foundation
 import SwiftUI
 import ShuffleIt
 import SwiftUIIntrospect
+import AlertKit
 
 struct ExplorePage: View {
     @EnvironmentObject var userSettings: UserSettings
     @State private var idx = 0
     @State private var scrollOffset: CGFloat = .zero
-    let colors: [Color] = [.blue, .brown, .black, .cyan, .indigo, .green, .pink, .purple]
+    @State private var newsPosts: Paginate<Blog> = .init(items: [], metadata: .init(page: 1, per: 6, total: 0))
     let iconSize = 30.0
     
     var body: some View {
@@ -25,31 +27,61 @@ struct ExplorePage: View {
                         Section {
                             GeometryReader { proxy in
                                 TabView(selection: $idx) {
-                                    ForEach(0..<colors.count, id: \.self) { currIdx in
-                                        colors[currIdx]
-                                            .overlay(alignment: .bottom) {
-                                                VStack {
-                                                    HStack {
-                                                        Text("Color:")
-                                                        Text(colors[currIdx].description)
+                                    ForEach(0..<newsPosts.items.count, id: \.self) { idx in
+                                        AsyncImage(url: URL(string: newsPosts.items[idx].bannerArt ?? "https://images.offprint.net/blog-banners/default_placeholder.jpg")) { phase in
+                                            if let image = phase.image {
+                                                image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                    .frame(width: proxy.size.width, height: proxy.size.height + 100)
+                                                    .clipShape(Rectangle())
+                                                    .background(Color.black)
+                                                    .overlay(alignment: .bottom) {
+                                                        VStack {
+                                                            HStack {
+                                                                Text(newsPosts.items[idx].title)
+                                                                    .font(.custom("JosefinSans-SemiBold", size: 24))
+                                                            }
+                                                            .offset(y: -12)
+                                                        }
+                                                        .frame(width: proxy.size.width, height: proxy.size.height / 3)
+                                                        .background(.thinMaterial.opacity(0.5))
                                                     }
-                                                    .offset(y: -12)
+                                            } else if phase.error != nil {
+                                                Color.red
+                                                Image("RemixIcon/System/close-circle-line")
+                                                    .foregroundStyle(Color.white)
+                                            } else {
+                                                ZStack {
+                                                    Color.gray
+                                                    Image("RemixIcon/Media/image-line")
                                                 }
-                                                .frame(width: proxy.size.width, height: proxy.size.height / 2)
                                             }
+                                        }
                                     }
                                 }
                                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                                 .ignoresSafeArea(.all)
+                                .clipped()
                                 .frame(width: proxy.size.width, height: proxy.size.height + 100)
                                 .offset(y: -100)
-                                .ignoresSafeArea(.all)
                                 .introspect(.scrollView, on: .iOS(.v13, .v14, .v15, .v16, .v17)) { scrollView in
                                     scrollView.bounces = false
+                                    scrollView.clipsToBounds = false
                                 }
                             }
                         }
                         .frame(height: 250)
+                        .task {
+                            do {
+                                let result = try await getNewsPosts()
+                                if result != nil {
+                                    newsPosts = result!
+                                }
+                            } catch {
+                                print("Error: \(error)")
+                            }
+                        }
                         
                         Section {
                             VStack {

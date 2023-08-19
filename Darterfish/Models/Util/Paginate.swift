@@ -14,8 +14,8 @@ struct Paginate<T: Codable>: Codable {
 
 extension Paginate {
     struct Metadata: Codable {
-        let page: Int
-        let per: Int
-        let total: Int
+        let page: Int64
+        let per: Int64
+        let total: Int64
     }
 }

@@ -19,11 +19,11 @@ struct Work: Codable, Identifiable {
     let tags: [Tag]
     let coverArt: String?
     let bannerArt: String?
-    let words: Int
-    let views: Int
-    var likes: Int
-    var dislikes: Int
-    let comments: Int
+    let words: Int64
+    let views: Int64
+    var likes: Int64
+    var dislikes: Int64
+    let comments: Int64
     let kind: Kind
     var approvalStatus: ApprovalStatus
     var publishedOn: Date?

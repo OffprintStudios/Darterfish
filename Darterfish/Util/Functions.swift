@@ -5,6 +5,7 @@
 //  Created by Alyx Mote on 8/16/23.
 //
 
+import Foundation
 import AlertKit
 import SwiftUI
 
@@ -18,4 +19,10 @@ func copyToClipboard(_ str: String) -> () -> Void {
             haptic: .success
         )
     }
+}
+
+func getDecoder() -> JSONDecoder {
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .iso8601
+    return decoder
 }
