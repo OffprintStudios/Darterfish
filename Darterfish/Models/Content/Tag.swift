@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Tag: Codable {
+struct Tag: Codable, Identifiable {
     let id: String
     let name: String
     let desc: String
@@ -20,7 +20,7 @@ struct Tag: Codable {
 }
 
 extension Tag {
-    struct Parent: Codable {
+    struct Parent: Codable, Identifiable {
         let id: String
         let name: String
         let desc: String

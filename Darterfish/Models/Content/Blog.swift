@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Blog: Codable {
+struct Blog: Codable, Identifiable {
     let id: String
     let author: Profile
     var title: String
