@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Paginate<T> {
+struct Paginate<T: Codable>: Codable {
     var items: [T]
     let metadata: Metadata
 }
 
 extension Paginate {
-    struct Metadata {
+    struct Metadata: Codable {
         let page: Int
         let per: Int
         let total: Int

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Roles: String {
+enum Roles: String, Codable {
     case admin = "Admin"
     case moderator = "Moderator"
     case workApprover = "WorkApprover"

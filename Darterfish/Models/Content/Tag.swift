@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Tag {
+struct Tag: Codable {
     let id: String
     let name: String
     let desc: String
@@ -20,7 +20,7 @@ struct Tag {
 }
 
 extension Tag {
-    struct Parent {
+    struct Parent: Codable {
         let id: String
         let name: String
         let desc: String
@@ -31,7 +31,7 @@ extension Tag {
         
     }
     
-    enum TagKind: String {
+    enum TagKind: String, Codable {
        case fandom = "Fandom"
        case warning = "Warning"
        case genre = "Genre"

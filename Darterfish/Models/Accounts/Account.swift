@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Account {
+struct Account: Codable {
     let id: String
     var profiles: [Profile]
     var roles: [Roles]

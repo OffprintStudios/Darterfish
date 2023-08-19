@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Work {
+struct Work: Codable {
     let id: String
     let author: Profile
     let title: String
@@ -33,19 +33,19 @@ struct Work {
 }
 
 extension Work {
-    enum Category: String {
+    enum Category: String, Codable {
         case original = "Original"
         case fanwork = "Fanwork"
     }
     
-    enum Status: String {
+    enum Status: String, Codable {
         case incomplete = "Incomplete"
         case complete = "Complete"
         case paused = "Paused"
         case cancelled = "Cancelled"
     }
     
-    enum Kind: String {
+    enum Kind: String, Codable {
         case prose = "Prose"
         case poetry = "Poetry"
         case nonfiction = "Nonfiction"
@@ -53,7 +53,7 @@ extension Work {
         case anthology = "Anthology"
     }
     
-    enum ApprovalStatus: String {
+    enum ApprovalStatus: String, Codable {
         case draft = "draft"
         case pending = "pending"
         case published = "published"

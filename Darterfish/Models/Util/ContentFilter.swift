@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ContentFilter: String {
+enum ContentFilter: String, Codable {
     case restricted
     case mature
     case explicit

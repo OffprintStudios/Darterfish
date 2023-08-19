@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Blog {
+struct Blog: Codable {
     let id: String
     let author: Profile
     var title: String
@@ -25,7 +25,7 @@ struct Blog {
 }
 
 extension Blog {
-    struct Stats {
+    struct Stats: Codable {
         var words: Int
         var views: Int
         var comments: Int

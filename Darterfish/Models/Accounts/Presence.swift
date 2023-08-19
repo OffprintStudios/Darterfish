@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Presence: String {
+enum Presence: String, Codable {
     case online = "Online"
     case offline = "Offline"
     case away = "Away"

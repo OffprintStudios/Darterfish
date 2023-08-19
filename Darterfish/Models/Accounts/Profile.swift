@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Profile {
+struct Profile: Codable {
     let id: String
     let account: AccountInfo
     var username: String
@@ -21,18 +21,18 @@ struct Profile {
 }
 
 extension Profile {
-    struct AccountInfo {
+    struct AccountInfo: Codable {
         let id: String
         let roles: [Roles]
     }
     
-    struct Info {
+    struct Info: Codable {
         var bio: String?
         var tagline: String?
         var presence: Presence
     }
     
-    struct Stats {
+    struct Stats: Codable {
         var works: Int
         var blogs: Int
         var followers: Int

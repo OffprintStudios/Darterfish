@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ContentRating: String {
+enum ContentRating: String, Codable {
     case everyone = "Everyone"
     case teen = "Teen"
     case mature = "Mature"
