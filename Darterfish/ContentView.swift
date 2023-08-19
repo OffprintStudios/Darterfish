@@ -29,35 +29,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            NavigationStack {
-                if currTabPage == .explore {
-                    ZStack {
-                        Color("BackgroundColor").ignoresSafeArea()
-                        ExplorePage()
-                            .navigationTitle("Explore")
-                            .navigationBarTitleDisplayMode(.large)
-                            .toolbar { TopBarItems() }
-                    }
-                } else if currTabPage == .social {
-                    ZStack {
-                        Color("BackgroundColor").ignoresSafeArea()
-                        SocialPage()
-                            .navigationTitle("Social")
-                            .navigationBarTitleDisplayMode(.large)
-                    }
-                } else if currTabPage == .library {
-                    ZStack {
-                        Color("BackgroundColor").ignoresSafeArea()
-                        LibraryPage()
-                            .navigationTitle("Library")
-                            .navigationBarTitleDisplayMode(.large)
-                    }
-                } else if currTabPage == .activity {
-                    ZStack {
-                        Color("BackgroundColor").ignoresSafeArea()
-                        ActivityPage()
-                    }
-                }
+            if currTabPage == .explore {
+                ExplorePage()
+            } else if currTabPage == .social {
+                SocialPage()
+            } else if currTabPage == .library {
+                LibraryPage()
+            } else if currTabPage == .activity {
+                ActivityPage()
             }
             
             TabNav(currTab: $currTabPage)

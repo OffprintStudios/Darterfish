@@ -8,6 +8,24 @@
         "revision" : "1da133b6f630f4e11d141ce5c05d09b68200278e",
         "version" : "5.0.1"
       }
+    },
+    {
+      "identity" : "shuffleit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dscyrescotti/ShuffleIt.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e0e70737c1f32f72aec305036484b737ef9d0467"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/SwiftUI-Introspect.git",
+      "state" : {
+        "revision" : "1136c9a348329887844de9353107c787becc675b",
+        "version" : "0.11.0"
+      }
     }
   ],
   "version" : 2
