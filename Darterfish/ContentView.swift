@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var userSettings: UserSettings
     @State private var isSheetPresented = false
-    @State private var tabState = TabNav.TabState(currTab: .explore, transitionIsForward: true)
+    @State private var tabState: TabNav.TabState
+    @State private var oldTab: TabNav.Tabs
+    @State private var transitionForward: Bool
     
     init() {
         let appear = UINavigationBarAppearance()
@@ -25,6 +27,10 @@ struct ContentView: View {
         
         UINavigationBar.appearance().standardAppearance = appear
         UINavigationBar.appearance().compactAppearance = appear
+        
+        oldTab = .explore
+        transitionForward = false
+        tabState = TabNav.TabState(currTab: .explore, transitionIsForward: true)
     }
     
     var body: some View {
@@ -40,12 +46,14 @@ struct ContentView: View {
                     ActivityPage()
                 }
             }
-            .transition(.dynamicSlide(forward: $tabState.transitionIsForward))
+            .transition(pageTransition)
             .animation(.default, value: tabState.currTab)
             
             TabNav(tabState: $tabState)
         }
-        
+        .onChange(of: tabState.currTab) {
+            oldTab = tabState.currTab
+        }
         .onReceive(NotificationCenter.default.publisher(for: NSNotification.Name("OpenUserSheet")), perform: { _ in
             isSheetPresented = true
         })
@@ -55,6 +63,19 @@ struct ContentView: View {
         }
         .preferredColorScheme(userSettings.darkMode)
         .background(Color("BackgroundColor"))
+    }
+    
+    var pageTransition: AnyTransition {
+        if oldTab.rawValue < tabState.currTab.rawValue {
+            return .asymmetric(
+                insertion: .offset(x: UIScreen.main.bounds.width),
+                removal: .offset(x: 0)
+            )
+        }
+        return .asymmetric(
+            insertion: .offset(x: -UIScreen.main.bounds.width),
+            removal: .offset(x: 0)
+        )
     }
 }
 

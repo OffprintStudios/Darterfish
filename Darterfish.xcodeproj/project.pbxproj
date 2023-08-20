@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8A1189EA2A8F0FDA00614F1D /* TabNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1189E92A8F0FDA00614F1D /* TabNav.swift */; };
 		8A665AC42A8F00CB00F64607 /* ThemeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A665AC32A8F00CB00F64607 /* ThemeDefinitions.swift */; };
+		8A695C882A91B7C700417CF2 /* NewWorksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A695C872A91B7C700417CF2 /* NewWorksList.swift */; };
+		8A695C8A2A91B83F00417CF2 /* RecentlyUpdatedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A695C892A91B83F00417CF2 /* RecentlyUpdatedList.swift */; };
+		8A695C8C2A91B8B600417CF2 /* TrendingNowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A695C8B2A91B8B600417CF2 /* TrendingNowList.swift */; };
+		8A695C8E2A91B8F900417CF2 /* ExploreCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A695C8D2A91B8F900417CF2 /* ExploreCarousel.swift */; };
+		8A695C912A91C91700417CF2 /* SnapToScroll in Frameworks */ = {isa = PBXBuildFile; productRef = 8A695C902A91C91700417CF2 /* SnapToScroll */; };
 		8A6F82ED2A8C965300FEFD60 /* TopBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F82EC2A8C965300FEFD60 /* TopBarItems.swift */; };
 		8A6F82F02A8C98F300FEFD60 /* UserSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F82EF2A8C98F300FEFD60 /* UserSheet.swift */; };
 		8A6F82F22A8D274800FEFD60 /* SettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F82F12A8D274800FEFD60 /* SettingsPanel.swift */; };
@@ -49,6 +54,8 @@
 		8AA69B5B2A8C7EF2008A853F /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4D2A8C7EF2008A853F /* JosefinSans-Thin.ttf */; };
 		8AA69B5C2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B4E2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf */; };
 		8AA69B5E2A8C7EFB008A853F /* JosefinSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA69B5D2A8C7EFB008A853F /* JosefinSans.ttf */; };
+		8ACA8C152A916E17003D77B1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8ACA8C142A916E17003D77B1 /* Alamofire */; };
+		8ACA8C172A917210003D77B1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C162A917210003D77B1 /* NetworkService.swift */; };
 		8ADF86472A8F29E500DC2B71 /* ActivityPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF86462A8F29E500DC2B71 /* ActivityPage.swift */; };
 		8ADF86522A8FCA9A00DC2B71 /* CarouselStack in Frameworks */ = {isa = PBXBuildFile; productRef = 8ADF86512A8FCA9A00DC2B71 /* CarouselStack */; };
 		8ADF86542A8FCA9A00DC2B71 /* ShuffleDeck in Frameworks */ = {isa = PBXBuildFile; productRef = 8ADF86532A8FCA9A00DC2B71 /* ShuffleDeck */; };
@@ -88,6 +95,10 @@
 /* Begin PBXFileReference section */
 		8A1189E92A8F0FDA00614F1D /* TabNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNav.swift; sourceTree = "<group>"; };
 		8A665AC32A8F00CB00F64607 /* ThemeDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDefinitions.swift; sourceTree = "<group>"; };
+		8A695C872A91B7C700417CF2 /* NewWorksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorksList.swift; sourceTree = "<group>"; };
+		8A695C892A91B83F00417CF2 /* RecentlyUpdatedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyUpdatedList.swift; sourceTree = "<group>"; };
+		8A695C8B2A91B8B600417CF2 /* TrendingNowList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingNowList.swift; sourceTree = "<group>"; };
+		8A695C8D2A91B8F900417CF2 /* ExploreCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCarousel.swift; sourceTree = "<group>"; };
 		8A6F82EC2A8C965300FEFD60 /* TopBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarItems.swift; sourceTree = "<group>"; };
 		8A6F82EF2A8C98F300FEFD60 /* UserSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSheet.swift; sourceTree = "<group>"; };
 		8A6F82F12A8D274800FEFD60 /* SettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPanel.swift; sourceTree = "<group>"; };
@@ -131,6 +142,7 @@
 		8AA69B4D2A8C7EF2008A853F /* JosefinSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Thin.ttf"; sourceTree = "<group>"; };
 		8AA69B4E2A8C7EF2008A853F /* JosefinSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-ExtraLight.ttf"; sourceTree = "<group>"; };
 		8AA69B5D2A8C7EFB008A853F /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
+		8ACA8C162A917210003D77B1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		8ADF86462A8F29E500DC2B71 /* ActivityPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPage.swift; sourceTree = "<group>"; };
 		8ADF86632A90854000DC2B71 /* Paginate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginate.swift; sourceTree = "<group>"; };
 		8ADF86662A9085C400DC2B71 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -150,7 +162,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A695C912A91C91700417CF2 /* SnapToScroll in Frameworks */,
 				8A82711E2A8DB8BD00E24A3E /* AlertKit in Frameworks */,
+				8ACA8C152A916E17003D77B1 /* Alamofire in Frameworks */,
 				8ADF86522A8FCA9A00DC2B71 /* CarouselStack in Frameworks */,
 				8ADF86542A8FCA9A00DC2B71 /* ShuffleDeck in Frameworks */,
 				8ADF865E2A905D2E00DC2B71 /* SwiftUIIntrospect in Frameworks */,
@@ -357,6 +371,10 @@
 			isa = PBXGroup;
 			children = (
 				8AA69AF62A8C6080008A853F /* ExplorePage.swift */,
+				8A695C8D2A91B8F900417CF2 /* ExploreCarousel.swift */,
+				8A695C872A91B7C700417CF2 /* NewWorksList.swift */,
+				8A695C892A91B83F00417CF2 /* RecentlyUpdatedList.swift */,
+				8A695C8B2A91B8B600417CF2 /* TrendingNowList.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -435,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				8AFF78A52A909C7600A8290E /* ExploreService.swift */,
+				8ACA8C162A917210003D77B1 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -462,6 +481,8 @@
 				8ADF86552A8FCA9A00DC2B71 /* ShuffleIt */,
 				8ADF86572A8FCA9A00DC2B71 /* ShuffleStack */,
 				8ADF865D2A905D2E00DC2B71 /* SwiftUIIntrospect */,
+				8ACA8C142A916E17003D77B1 /* Alamofire */,
+				8A695C902A91C91700417CF2 /* SnapToScroll */,
 			);
 			productName = Darterfish;
 			productReference = 8AA69AC82A8C5BFA008A853F /* Darterfish.app */;
@@ -539,6 +560,8 @@
 				8A82711C2A8DB8BD00E24A3E /* XCRemoteSwiftPackageReference "AlertKit" */,
 				8ADF86502A8FCA9A00DC2B71 /* XCRemoteSwiftPackageReference "ShuffleIt" */,
 				8ADF865C2A905D2E00DC2B71 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				8ACA8C132A916E17003D77B1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8A695C8F2A91C91700417CF2 /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */,
 			);
 			productRefGroup = 8AA69AC92A8C5BFA008A853F /* Products */;
 			projectDirPath = "";
@@ -602,9 +625,11 @@
 				8AA69ACE2A8C5BFA008A853F /* ContentView.swift in Sources */,
 				8ADF86642A90854000DC2B71 /* Paginate.swift in Sources */,
 				8ADF86672A9085C400DC2B71 /* Profile.swift in Sources */,
+				8A695C882A91B7C700417CF2 /* NewWorksList.swift in Sources */,
 				8ADF86472A8F29E500DC2B71 /* ActivityPage.swift in Sources */,
 				8ADF86702A9087BF00DC2B71 /* Blog.swift in Sources */,
 				8AA69ACC2A8C5BFA008A853F /* DarterfishApp.swift in Sources */,
+				8A695C8C2A91B8B600417CF2 /* TrendingNowList.swift in Sources */,
 				8ADF86722A90884000DC2B71 /* Work.swift in Sources */,
 				8A6F82FE2A8D389A00FEFD60 /* BackButton.swift in Sources */,
 				8AA69B0D2A8C72AF008A853F /* ThemeManager.swift in Sources */,
@@ -617,8 +642,11 @@
 				8A6F82FC2A8D2FD200FEFD60 /* ThemesPanel.swift in Sources */,
 				8ADF86742A9088B900DC2B71 /* ContentRating.swift in Sources */,
 				8A6F82ED2A8C965300FEFD60 /* TopBarItems.swift in Sources */,
+				8A695C8A2A91B83F00417CF2 /* RecentlyUpdatedList.swift in Sources */,
 				8AA69AF72A8C6080008A853F /* ExplorePage.swift in Sources */,
 				8ADF867B2A908CA700DC2B71 /* ContentFilter.swift in Sources */,
+				8A695C8E2A91B8F900417CF2 /* ExploreCarousel.swift in Sources */,
+				8ACA8C172A917210003D77B1 /* NetworkService.swift in Sources */,
 				8A1189EA2A8F0FDA00614F1D /* TabNav.swift in Sources */,
 				8A665AC42A8F00CB00F64607 /* ThemeDefinitions.swift in Sources */,
 				8A8271242A8DCC6000E24A3E /* UserSettings.swift in Sources */,
@@ -963,12 +991,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8A695C8F2A91C91700417CF2 /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftui-library/hstack-snap-to-scroll.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 		8A82711C2A8DB8BD00E24A3E /* XCRemoteSwiftPackageReference "AlertKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sparrowcode/AlertKit";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.1;
+			};
+		};
+		8ACA8C132A916E17003D77B1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
 			};
 		};
 		8ADF86502A8FCA9A00DC2B71 /* XCRemoteSwiftPackageReference "ShuffleIt" */ = {
@@ -990,10 +1034,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8A695C902A91C91700417CF2 /* SnapToScroll */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A695C8F2A91C91700417CF2 /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */;
+			productName = SnapToScroll;
+		};
 		8A82711D2A8DB8BD00E24A3E /* AlertKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8A82711C2A8DB8BD00E24A3E /* XCRemoteSwiftPackageReference "AlertKit" */;
 			productName = AlertKit;
+		};
+		8ACA8C142A916E17003D77B1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ACA8C132A916E17003D77B1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		8ADF86512A8FCA9A00DC2B71 /* CarouselStack */ = {
 			isa = XCSwiftPackageProductDependency;

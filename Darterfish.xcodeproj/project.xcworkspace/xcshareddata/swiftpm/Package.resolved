@@ -1,12 +1,30 @@
 {
   "pins" : [
     {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "bc268c28fb170f494de9e9927c371b8342979ece",
+        "version" : "5.7.1"
+      }
+    },
+    {
       "identity" : "alertkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sparrowcode/AlertKit",
       "state" : {
         "revision" : "1da133b6f630f4e11d141ce5c05d09b68200278e",
         "version" : "5.0.1"
+      }
+    },
+    {
+      "identity" : "hstack-snap-to-scroll",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftui-library/hstack-snap-to-scroll.git",
+      "state" : {
+        "revision" : "d40c4cbe9f8e9bd8b424fc8b61cd3c55bd85d30a",
+        "version" : "1.0.3"
       }
     },
     {

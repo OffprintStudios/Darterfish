@@ -136,10 +136,10 @@ extension TabNav {
     }
     
     enum Tabs: Int {
-        case explore = 0
-        case social = 1
-        case library = 2
-        case activity = 3
+        case explore = 1
+        case social = 2
+        case library = 3
+        case activity = 4
         
         static let directionIsForward = true
     }
