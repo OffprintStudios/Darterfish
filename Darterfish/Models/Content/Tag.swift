@@ -7,30 +7,32 @@
 
 import Foundation
 
-struct Tag: Codable, Identifiable {
+final class Tag: Codable, Identifiable {
     let id: String
     let name: String
-    let desc: String
-    let parent: Parent?
-    let children: [Tag]?
-    let works: [String: String]?
+    let desc: String?
+    let parent: Tag?
+    let children: [Tag]
+    let works: [String: String]
     let kind: TagKind
     let createdAt: Date
     let updatedAt: Date
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(String.self, forKey: .id)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.desc = try container.decodeIfPresent(String.self, forKey: .desc)
+        self.parent = try? container.decodeIfPresent(Tag.self, forKey: .parent)
+        self.children = try container.decodeIfPresent([Tag].self, forKey: .children) ?? []
+        self.works = try container.decodeIfPresent([String: String].self, forKey: .works) ?? [:]
+        self.kind = try container.decode(TagKind.self, forKey: .kind)
+        self.createdAt = try container.decode(Date.self, forKey: .createdAt)
+        self.updatedAt = try container.decode(Date.self, forKey: .updatedAt)
+    }
 }
 
 extension Tag {
-    struct Parent: Codable, Identifiable {
-        let id: String
-        let name: String
-        let desc: String
-        let works: [String: String]?
-        let kind: TagKind
-        let createdAt: Date
-        let updatedAt: Date
-        
-    }
-    
     enum TagKind: String, Codable {
        case fandom = "Fandom"
        case warning = "Warning"
@@ -41,4 +43,27 @@ extension Tag {
        case status = "Status"
        case workKind = "WorkKind"
     }
+    
+    struct FetchTag: Codable {
+        let tag: Tag
+        let works: UInt64?
+    }
 }
+
+let TagIconStrings: [String: String] = [
+    "Action/Adventure": "RemixIcon/Others/sword-line",
+    "Comedy": "RemixIcon/UserAndFaces/emotion-laugh-line",
+    "Drama": "RemixIcon/Document/file-paper-2-line",
+    "Erotica": "RemixIcon/Others/door-closed-line",
+    "Fantasy": "RemixIcon/Design/magic-line",
+    "Horror": "RemixIcon/UserAndFaces/ghost-2-line",
+    "Mystery": "RemixIcon/System/search-2-line",
+    "Romance": "RemixIcon/HealthAndMedical/hearts-line",
+    "Science Fiction": "RemixIcon/UserAndFaces/aliens-line",
+    "Slice of Life": "RemixIcon/Buildings/home-3-line",
+    "Speculative Fiction": "RemixIcon/Weather/meteor-line",
+    "Thriller": "RemixIcon/UserAndFaces/spy-line",
+    "Tragedy": "RemixIcon/UserAndFaces/skull-line",
+    "Dark": "RemixIcon/Design/contrast-2-line",
+    "Sad": "RemixIcon/UserAndFaces/emotion-sad-line"
+]

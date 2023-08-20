@@ -23,7 +23,6 @@ struct Work: Codable, Identifiable {
     let views: Int64
     var likes: Int64
     var dislikes: Int64
-    let comments: Int64
     let kind: Kind
     var approvalStatus: ApprovalStatus
     var publishedOn: Date?
@@ -54,10 +53,9 @@ extension Work {
     }
     
     enum ApprovalStatus: String, Codable {
-        case draft = "draft"
-        case pending = "pending"
-        case published = "published"
-        case unpublished = "unpublished"
-        case rejected = "rejected"
+        case notSubmitted = "NotSubmitted"
+        case approved = "Approved"
+        case pending = "Pending"
+        case rejected = "Rejected"
     }
 }

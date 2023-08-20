@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RecentlyUpdatedList: View {
     @Binding var iconSize: CGFloat
+    @State var loading = false
+    @State private var recentlyUpdated: Paginate<Work> = .init(items: [], metadata: .init(page: 1, per: 6, total: 0))
     
     var body: some View {
         Section {
@@ -18,7 +20,7 @@ struct RecentlyUpdatedList: View {
                         .resizable()
                         .frame(width: iconSize, height: iconSize)
                     Text("Recently Updated")
-                        .font(.custom("JosefinSans-SemiBold", size: 24))
+                        .font(.custom("JosefinSans-SemiBold", size: 20))
                         .offset(y: 2)
                     Spacer()
                     ZStack {
@@ -29,26 +31,42 @@ struct RecentlyUpdatedList: View {
                 }
                 .padding(.leading)
                 .padding(.trailing)
-                .padding(.top)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack(spacing: 10.0) {
-                        ForEach(0..<3) { i in
-                            VStack {
+                    if loading {
+                        LazyHStack(spacing: 10.0) {
+                            ForEach(0..<1) { i in
                                 RoundedRectangle(cornerRadius: 16)
                                     .fill(Color.gray.opacity(0.25))
-                                    .frame(width: 350, height: 125)
-                                
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(Color.gray.opacity(0.25))
-                                    .frame(width: 350, height: 125)
+                                    .frame(width: 350, height: 175)
                             }
                         }
+                        .scrollTargetLayout()
+                    } else {
+                        LazyHStack(spacing: 10.0) {
+                            ForEach(0..<recentlyUpdated.items.count, id: \.self) { idx in
+                                WorkCard(work: $recentlyUpdated.items[idx])
+                            }
+                        }
+                        .scrollTargetLayout()
                     }
-                    .scrollTargetLayout()
                 }
                 .scrollTargetBehavior(.viewAligned)
                 .safeAreaPadding(.horizontal)
+            }
+            .frame(height: 225)
+            .padding(.top)
+        }
+        .task {
+            do {
+                loading = true
+                let result = try await getRecentlyUpdated()
+                if result != nil {
+                    recentlyUpdated = result!
+                }
+                loading = false
+            } catch {
+                print("Error: \(error)")
             }
         }
     }

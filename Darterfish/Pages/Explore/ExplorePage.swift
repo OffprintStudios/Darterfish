@@ -11,7 +11,7 @@ import SwiftUI
 struct ExplorePage: View {
     @EnvironmentObject var userSettings: UserSettings
     @State private var scrollOffset: CGFloat = .zero
-    @State private var iconSize: CGFloat = 30.0
+    @State private var iconSize: CGFloat = 24.0
     
     var body: some View {
         NavigationStack {
@@ -23,8 +23,9 @@ struct ExplorePage: View {
                         // TrendingNowList(iconSize: $iconSize)
                         NewWorksList(iconSize: $iconSize)
                         RecentlyUpdatedList(iconSize: $iconSize)
+                        GenreList(iconSize: $iconSize)
                     }
-                    .padding(.bottom)
+                    .padding(.bottom, 25)
                     GeometryReader { geo in
                         let offset = geo.frame(in: .named("scroll")).minY
                         Color.clear.preference(key: ExploreViewOffsetPreferenceKey.self, value: offset)
@@ -40,7 +41,7 @@ struct ExplorePage: View {
                 HStack {
                     Text("Offprint")
                         .font(.custom("JosefinSans-Bold", size: 24))
-                        .offset(y: 3)
+                        .offset(y: 5)
                         .padding(.leading)
                         .foregroundStyle(Color.white)
                     Spacer()
@@ -69,4 +70,9 @@ extension ExplorePage {
             value += nextValue()
         }
     }
+}
+
+#Preview {
+    ExplorePage()
+        .environmentObject(UserSettings())
 }
