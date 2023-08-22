@@ -55,7 +55,7 @@ struct ExplorePage: View {
                 }
                 .padding(.bottom)
                 .background(Color(userSettings.theme.accent).opacity(
-                    scrollOffset > 0 ? (scrollOffset > 260 ? 1.0 : scrollOffset / 260) : 0
+                    scrollOffset > 0 ? (scrollOffset > 230 ? 1.0 : scrollOffset / 230) : 0
                 ))
             }
         }
@@ -70,9 +70,4 @@ extension ExplorePage {
             value += nextValue()
         }
     }
-}
-
-#Preview {
-    ExplorePage()
-        .environmentObject(UserSettings())
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct WorkCard: View {
     @EnvironmentObject var userSettings: UserSettings
     @Binding var work: Work
+    @State var fullWidth = false
     
     var body: some View {
         HStack {
@@ -111,6 +112,6 @@ struct WorkCard: View {
         }
         .clipped()
         .clipShape(RoundedRectangle(cornerRadius: 16))
-        .frame(width: 350, height: 175)
+        .frame(minWidth: 350, maxWidth: fullWidth ? UIScreen.main.bounds.width : 350, minHeight: 175, maxHeight: 175)
     }
 }

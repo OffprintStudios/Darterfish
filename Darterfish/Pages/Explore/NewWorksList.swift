@@ -15,22 +15,27 @@ struct NewWorksList: View {
     var body: some View {
         Section {
             VStack(spacing: 0) {
-                HStack {
-                    Image("RemixIcon/System/loader-2-line")
-                        .resizable()
-                        .frame(width: iconSize, height: iconSize)
-                    Text("What's New")
-                        .font(.custom("JosefinSans-SemiBold", size: 20))
-                        .offset(y: 2)
-                    Spacer()
-                    ZStack {
-                        Image("RemixIcon/Arrows/arrow-right-s-line")
+                NavigationLink {
+                    ExploreDetails(currCategory: .newest, currType: .all, currRating: .all)
+                } label: {
+                    HStack {
+                        Image("RemixIcon/System/loader-2-line")
                             .resizable()
                             .frame(width: iconSize, height: iconSize)
+                        Text("What's New")
+                            .font(.custom("JosefinSans-SemiBold", size: 20))
+                            .offset(y: 2)
+                        Spacer()
+                        ZStack {
+                            Image("RemixIcon/Arrows/arrow-right-s-line")
+                                .resizable()
+                                .frame(width: iconSize, height: iconSize)
+                        }
                     }
+                    .padding(.leading)
+                    .padding(.trailing)
                 }
-                .padding(.leading)
-                .padding(.trailing)
+                .foregroundStyle(Color.text)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     if loading {

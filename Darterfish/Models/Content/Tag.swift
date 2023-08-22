@@ -44,7 +44,15 @@ extension Tag {
        case workKind = "WorkKind"
     }
     
-    struct FetchTag: Codable {
+    struct FetchTag: Codable, Hashable {
+        static func == (lhs: Tag.FetchTag, rhs: Tag.FetchTag) -> Bool {
+            return lhs.tag.id == rhs.tag.id
+        }
+        
+        func hash(into hasher: inout Hasher) {
+            return hasher.combine(tag.id)
+        }
+        
         let tag: Tag
         let works: UInt64?
     }
