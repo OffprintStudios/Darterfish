@@ -16,7 +16,7 @@ struct RecentlyUpdatedList: View {
         Section {
             VStack {
                 NavigationLink {
-                    ExploreDetails(currCategory: .newest, currType: .all, currRating: .all)
+                    ExploreDetails(currCategory: .updated, currType: .all, currRating: .all)
                 } label: {
                     HStack {
                         Image("RemixIcon/Map/signal-tower-line")
