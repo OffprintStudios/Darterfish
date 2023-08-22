@@ -32,14 +32,14 @@ struct GenreFilterMenu: View {
                         .frame(width: 18, height: 18)
                         .padding(.trailing, 5)
                     Text(currGenre!.name.uppercased())
-                        .font(.system(size: 14, weight: .bold))
+                        .font(.system(size: 12, weight: .bold))
                 } else {
                     Image("RemixIcon/Others/box-2-fill")
                         .resizable()
                         .frame(width: 18, height: 18)
                         .padding(.trailing, 5)
                     Text("ALL GENRES")
-                        .font(.system(size: 14, weight: .bold))
+                        .font(.system(size: 12, weight: .bold))
                 }
             }
             .padding(.leading, 15)

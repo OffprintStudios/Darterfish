@@ -45,7 +45,7 @@ struct TypeFilterMenu: View {
                 }
                 
                 Text(currType.rawValue.uppercased())
-                    .font(.system(size: 14, weight: .bold))
+                    .font(.system(size: 12, weight: .bold))
             }
             .padding(.leading)
             .padding(.top)

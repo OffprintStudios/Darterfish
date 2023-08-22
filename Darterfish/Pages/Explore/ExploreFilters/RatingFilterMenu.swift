@@ -62,7 +62,7 @@ struct RatingFilterMenu: View {
                         .padding(.trailing, 5)
                 }
                 Text(currRating.rawValue.uppercased())
-                    .font(.system(size: 14, weight: .bold))
+                    .font(.system(size: 12, weight: .bold))
             }
             .padding(.leading, 15)
             .padding(.top)

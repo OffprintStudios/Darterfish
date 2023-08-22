@@ -43,7 +43,7 @@ struct ExploreDetails: View {
         }
         .navigationBarBackButtonHidden()
         .safeAreaInset(edge: .top, spacing: 0) {
-            HStack {
+            ZStack {
                 HStack(spacing: 0) {
                     Image("RemixIcon/Arrows/arrow-left-s-line")
                         .resizable()
@@ -51,32 +51,33 @@ struct ExploreDetails: View {
                     Text("Back")
                         .font(.custom("JosefinSans-Regular", size: 18.0))
                         .offset(y: 2)
+                    Spacer()
                 }
                 .padding(.leading)
-                .offset(y: 7)
+                .offset(y: 4)
                 .foregroundStyle(Color.white)
                 .onTapGesture {
                     dismiss()
                 }
                 
-                Spacer()
-                
                 Text("Explore")
                     .font(.custom("JosefinSans-Regular", size: 18.0))
-                    .padding(.top)
-                    .offset(x: -39, y: 2)
                     .foregroundStyle(Color.white)
+                    .offset(y: 6)
                 
-                Spacer()
-                
-                Button(action: { print("Search") }) {
-                    Image("RemixIcon/System/search-eye-line")
-                        .resizable()
-                        .frame(width: 28, height: 28)
+                HStack {
+                    Spacer()
+                    Button(action: { print("Search") }) {
+                        Image("RemixIcon/System/search-eye-line")
+                            .resizable()
+                            .frame(width: 22, height: 22)
+                    }
+                    .foregroundStyle(Color.white)
+                    .padding(.trailing)
                 }
-                .foregroundStyle(Color.white)
-                .padding(.trailing)
+                .offset(y: 3)
             }
+            .padding(.top, 5)
             .padding(.bottom)
             .background(Color(userSettings.theme.accent))
         }
