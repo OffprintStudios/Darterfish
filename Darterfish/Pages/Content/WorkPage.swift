@@ -11,7 +11,7 @@ struct WorkPage: View {
     @EnvironmentObject var userSettings: UserSettings
     @Environment(\.dismiss) var dismiss
     @State private var scrollOffset: CGFloat = .zero
-    @State var work: Work
+    @Binding var work: Work
     
     var body: some View {
         NavigationStack {

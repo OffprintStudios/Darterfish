@@ -11,6 +11,7 @@ struct WorkCard: View {
     @EnvironmentObject var userSettings: UserSettings
     @Binding var work: Work
     @State var fullWidth = false
+    @State private var isOpened = false
     
     var body: some View {
         VStack {
@@ -130,5 +131,11 @@ struct WorkCard: View {
         .clipped()
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .frame(minWidth: 350, maxWidth: fullWidth ? UIScreen.main.bounds.width : 350, minHeight: 225, maxHeight: 225)
+        .onTapGesture {
+            isOpened.toggle()
+        }
+        .fullScreenCover(isPresented: $isOpened) {
+            WorkPage(work: $work)
+        }
     }
 }
