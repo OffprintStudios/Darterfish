@@ -19,7 +19,7 @@ struct WorkPage: View {
                 ZStack {
                     Color("BackgroundColor").ignoresSafeArea()
                     VStack(spacing: 0) {
-                        ParallaxHeader(coordinateSpace: "workPageScroll", defaultHeight: 250) {
+                        ParallaxHeader(coordinateSpace: "workPageScroll", defaultHeight: 200) {
                             if let bannerArt = work.bannerArt {
                                 AsyncImage(url: URL(string: bannerArt)) { phase in
                                     if let image = phase.image {
@@ -37,50 +37,7 @@ struct WorkPage: View {
                             }
                         }
                         VStack {
-                            ZStack(alignment: .bottomLeading) {
-                                if let coverArt = work.coverArt {
-                                    AsyncImage(url: URL(string: coverArt)!) { phase in
-                                        if let image = phase.image {
-                                            VStack {
-                                                Spacer()
-                                                image
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .clipped()
-                                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                            }
-                                            .frame(width: 125, height: 200)
-                                        }
-                                    }
-                                } else {
-                                    Color.clear
-                                        .frame(width: 125, height: 200)
-                                }
-                                HStack {
-                                    Spacer()
-                                    
-                                    Button(action: { print("Like") }) {
-                                        Image("RemixIcon/System/thumb-up-line")
-                                            .resizable()
-                                            .frame(width: 12, height: 12)
-                                        Text("\(work.likes.formatUsingAbbrevation())")
-                                            .font(.system(size: 12, weight: .semibold))
-                                    }
-                                    .foregroundStyle(Color.green)
-                                    
-                                    Button(action: { print("Dislike") }) {
-                                        Image("RemixIcon/System/thumb-down-line")
-                                            .resizable()
-                                            .frame(width: 12, height: 12)
-                                        Text("\(work.dislikes.formatUsingAbbrevation())")
-                                            .font(.system(size: 12, weight: .semibold))
-                                    }
-                                    .foregroundStyle(Color.red)
-                                }
-                                .padding(.bottom)
-                            }
-                            .frame(height: 35)
-                            .offset(y: -85)
+                            WorkCoverArtBlock(work: $work)
                             
                             Text(work.title)
                             Spacer()
@@ -94,6 +51,7 @@ struct WorkPage: View {
                         Color.clear.preference(key: WorkPageOffsetPreferenceKey.self, value: offset)
                     }
                 }
+                .background(Color("BackgroundColor"))
             }
             .coordinateSpace(name: "workPageScroll")
             .onPreferenceChange(WorkPageOffsetPreferenceKey.self) { value in
