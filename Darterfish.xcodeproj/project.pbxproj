@@ -10,6 +10,9 @@
 		8A1189EA2A8F0FDA00614F1D /* TabNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1189E92A8F0FDA00614F1D /* TabNav.swift */; };
 		8A2000442A93056100B4BBA9 /* ExploreDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2000432A93056100B4BBA9 /* ExploreDetails.swift */; };
 		8A365E882A93BE500074468E /* ExploreFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A365E872A93BE500074468E /* ExploreFilters.swift */; };
+		8A4A0DF32A95153100A6D0FA /* WorkPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A0DF22A95153100A6D0FA /* WorkPage.swift */; };
+		8A4A0DF72A95239000A6D0FA /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A0DF62A95239000A6D0FA /* ParallaxHeader.swift */; };
+		8A4A0DFA2A9527ED00A6D0FA /* FancyScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 8A4A0DF92A9527ED00A6D0FA /* FancyScrollView */; };
 		8A665AC42A8F00CB00F64607 /* ThemeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A665AC32A8F00CB00F64607 /* ThemeDefinitions.swift */; };
 		8A695C882A91B7C700417CF2 /* NewWorksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A695C872A91B7C700417CF2 /* NewWorksList.swift */; };
 		8A695C8A2A91B83F00417CF2 /* RecentlyUpdatedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A695C892A91B83F00417CF2 /* RecentlyUpdatedList.swift */; };
@@ -106,6 +109,8 @@
 		8A1189E92A8F0FDA00614F1D /* TabNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNav.swift; sourceTree = "<group>"; };
 		8A2000432A93056100B4BBA9 /* ExploreDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDetails.swift; sourceTree = "<group>"; };
 		8A365E872A93BE500074468E /* ExploreFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFilters.swift; sourceTree = "<group>"; };
+		8A4A0DF22A95153100A6D0FA /* WorkPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkPage.swift; sourceTree = "<group>"; };
+		8A4A0DF62A95239000A6D0FA /* ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
 		8A665AC32A8F00CB00F64607 /* ThemeDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDefinitions.swift; sourceTree = "<group>"; };
 		8A695C872A91B7C700417CF2 /* NewWorksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorksList.swift; sourceTree = "<group>"; };
 		8A695C892A91B83F00417CF2 /* RecentlyUpdatedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyUpdatedList.swift; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4A0DFA2A9527ED00A6D0FA /* FancyScrollView in Frameworks */,
 				8A695C912A91C91700417CF2 /* SnapToScroll in Frameworks */,
 				8A82711E2A8DB8BD00E24A3E /* AlertKit in Frameworks */,
 				8ACA8C152A916E17003D77B1 /* Alamofire in Frameworks */,
@@ -210,6 +216,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A4A0DF12A95152700A6D0FA /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				8A4A0DF22A95153100A6D0FA /* WorkPage.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		8A695C922A92112500417CF2 /* Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +361,7 @@
 		8AA69AF52A8C6072008A853F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				8A4A0DF12A95152700A6D0FA /* Content */,
 				8ADF864F2A8FC8A900DC2B71 /* Library */,
 				8ADF864E2A8FC88500DC2B71 /* Search */,
 				8ADF864D2A8FC87D00DC2B71 /* Activity */,
@@ -460,6 +475,7 @@
 		8ADF86592A90410900DC2B71 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				8A4A0DF62A95239000A6D0FA /* ParallaxHeader.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -529,6 +545,7 @@
 				8ADF865D2A905D2E00DC2B71 /* SwiftUIIntrospect */,
 				8ACA8C142A916E17003D77B1 /* Alamofire */,
 				8A695C902A91C91700417CF2 /* SnapToScroll */,
+				8A4A0DF92A9527ED00A6D0FA /* FancyScrollView */,
 			);
 			productName = Darterfish;
 			productReference = 8AA69AC82A8C5BFA008A853F /* Darterfish.app */;
@@ -608,6 +625,7 @@
 				8ADF865C2A905D2E00DC2B71 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				8ACA8C132A916E17003D77B1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8A695C8F2A91C91700417CF2 /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */,
+				8A4A0DF82A9527ED00A6D0FA /* XCRemoteSwiftPackageReference "FancyScrollView" */,
 			);
 			productRefGroup = 8AA69AC92A8C5BFA008A853F /* Products */;
 			projectDirPath = "";
@@ -685,6 +703,7 @@
 				8A6F82FE2A8D389A00FEFD60 /* BackButton.swift in Sources */,
 				8AA25F6A2A94768000775788 /* RatingFilterMenu.swift in Sources */,
 				8AA69B0D2A8C72AF008A853F /* ThemeManager.swift in Sources */,
+				8A4A0DF32A95153100A6D0FA /* WorkPage.swift in Sources */,
 				8A6F82F02A8C98F300FEFD60 /* UserSheet.swift in Sources */,
 				8A695C9A2A92A33600417CF2 /* TagCard.swift in Sources */,
 				8A6F82F62A8D2FAA00FEFD60 /* AboutPanel.swift in Sources */,
@@ -713,6 +732,7 @@
 				8AA25F682A9472B600775788 /* TypeFilterMenu.swift in Sources */,
 				8AA69B012A8C6F08008A853F /* Theme.swift in Sources */,
 				8A6F82F22A8D274800FEFD60 /* SettingsPanel.swift in Sources */,
+				8A4A0DF72A95239000A6D0FA /* ParallaxHeader.swift in Sources */,
 				8AFF78A62A909C7600A8290E /* ExploreService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,6 +1065,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8A4A0DF82A9527ED00A6D0FA /* XCRemoteSwiftPackageReference "FancyScrollView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nerdsupremacist/FancyScrollView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
 		8A695C8F2A91C91700417CF2 /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swiftui-library/hstack-snap-to-scroll.git";
@@ -1088,6 +1116,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8A4A0DF92A9527ED00A6D0FA /* FancyScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A4A0DF82A9527ED00A6D0FA /* XCRemoteSwiftPackageReference "FancyScrollView" */;
+			productName = FancyScrollView;
+		};
 		8A695C902A91C91700417CF2 /* SnapToScroll */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8A695C8F2A91C91700417CF2 /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */;

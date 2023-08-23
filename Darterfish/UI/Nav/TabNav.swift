@@ -29,7 +29,7 @@ struct TabNav: View {
                     .foregroundStyle(Color.white)
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
-                    .padding(.top, geo.size.height * 0.8)
+                    .padding(.top, geo.size.height * 0.9)
                     .opacity(tabState.currTab == .explore ? 1.0 : 0.0)
             }
             .foregroundStyle(tabState.currTab == .explore ? Color.white : Color(userSettings.theme.accentLight))
@@ -51,7 +51,7 @@ struct TabNav: View {
                     .foregroundStyle(Color.white)
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
-                    .padding(.top, geo.size.height * 0.8)
+                    .padding(.top, geo.size.height * 0.9)
                     .opacity(tabState.currTab == .social ? 1.0 : 0.0)
             }
             .foregroundStyle(tabState.currTab == .social ? Color.white : Color(userSettings.theme.accentLight))
@@ -68,7 +68,7 @@ struct TabNav: View {
                         .frame(width: geo.size.width * 0.75, height: geo.size.height * 0.75)
                     Image("RemixIcon/Arrows/arrow-up-s-line")
                         .resizable()
-                        .frame(width: iconSize + 10, height: iconSize + 10)
+                        .frame(width: iconSize, height: iconSize)
                         .foregroundStyle(Color(userSettings.theme.accent))
                 }
                 .frame(width: geo.size.width, height: geo.size.height)
@@ -89,7 +89,7 @@ struct TabNav: View {
                     .foregroundStyle(Color.white)
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
-                    .padding(.top, geo.size.height * 0.8)
+                    .padding(.top, geo.size.height * 0.9)
                     .opacity(tabState.currTab == .library ? 1.0 : 0.0)
             }
             .foregroundStyle(tabState.currTab == .library ? Color.white : Color(userSettings.theme.accentLight))
@@ -111,7 +111,7 @@ struct TabNav: View {
                     .foregroundStyle(Color.white)
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
-                    .padding(.top, geo.size.height * 0.8)
+                    .padding(.top, geo.size.height * 0.9)
                     .opacity(tabState.currTab == .activity ? 1.0 : 0.0)
             }
             .foregroundStyle(tabState.currTab == .activity ? Color.white : Color(userSettings.theme.accentLight))
@@ -124,7 +124,7 @@ struct TabNav: View {
             Spacer()
         }
         .background(Color(userSettings.theme.accent))
-        .frame(height: 68)
+        .frame(height: 48)
         .ignoresSafeArea()
     }
 }
@@ -143,4 +143,10 @@ extension TabNav {
         
         static let directionIsForward = true
     }
+}
+
+#Preview {
+    TabNav(tabState: .constant(.init(currTab: .explore, transitionIsForward: true)))
+        .environmentObject(UserSettings())
+        
 }

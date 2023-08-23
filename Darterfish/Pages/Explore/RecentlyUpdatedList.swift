@@ -59,7 +59,7 @@ struct RecentlyUpdatedList: View {
                 .scrollTargetBehavior(.viewAligned)
                 .safeAreaPadding(.horizontal)
             }
-            .frame(height: 225)
+            .frame(height: 275)
             .padding(.top)
         }
         .task {

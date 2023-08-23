@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "fancyscrollview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nerdsupremacist/FancyScrollView.git",
+      "state" : {
+        "revision" : "7f8194b23dc209cdb5b0ebc9799a8de487166fdf",
+        "version" : "0.1.4"
+      }
+    },
+    {
       "identity" : "hstack-snap-to-scroll",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftui-library/hstack-snap-to-scroll.git",
