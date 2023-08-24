@@ -21,6 +21,26 @@ struct WorkPage: View {
                     WorkBannerArtBlock(work: $work)
                     WorkCoverArtBlock(work: $work)
                     WorkTitleBlock(work: $work)
+                    
+                    HStack(spacing: 0) {
+                        HStack(spacing: 5) {
+                            Spacer()
+                            Image("RemixIcon/Document/book-open-line")
+                                .resizable()
+                                .frame(width: 16, height: 16)
+                            Text("Start Reading".uppercased())
+                                .font(.system(size: 14, weight: .bold))
+                            Spacer()
+                        }
+                        .padding(.init(top: 12, leading: 10, bottom: 12, trailing: 10))
+                        .background {
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color.green)
+                        }
+                        .foregroundStyle(Color.white)
+                    }
+                    .padding(15)
+                    
                     Section {
                         switch currTab {
                         case .details:
@@ -112,7 +132,7 @@ struct WorkPage: View {
                 .padding(.top, 0)
                 .padding(.leading)
                 .padding(.trailing)
-                .padding(.bottom)
+                .padding(.bottom, 10)
                 .background(.ultraThinMaterial.opacity(
                     scrollOffset > 0 ? (scrollOffset > 170 ? 1.0 : scrollOffset / 170) : 0
                 ))

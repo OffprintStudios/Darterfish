@@ -76,6 +76,8 @@ struct WorkTabsHeader: View {
                     .opacity(currTab == .reviews ? 1.0 : 0.0)
             }
         }
+        .padding(.leading)
+        .padding(.trailing)
         .frame(width: UIScreen.main.bounds.width, height: 50)
         .overlay(Divider().frame(maxWidth: .infinity, maxHeight: 1).background(Color.gray.opacity(0.5)), alignment: .bottom)
     }

@@ -117,7 +117,7 @@ struct DetailsTab: View {
                         Spacer()
                         VStack(alignment: .center) {
                             Text("No Artwork Available".uppercased())
-                                .font(.system(size: 12))
+                                .font(.system(size: 12, weight: .bold))
                                 .foregroundStyle(Color.gray.opacity(0.75))
                         }
                         .frame(width: .infinity, height: 100)

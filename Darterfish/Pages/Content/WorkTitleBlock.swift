@@ -83,7 +83,6 @@ struct WorkTitleBlock: View {
             }
             .padding(.leading)
             .padding(.trailing)
-            .padding(.bottom)
         }
     }
 }
