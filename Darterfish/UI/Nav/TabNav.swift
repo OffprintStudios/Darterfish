@@ -144,9 +144,3 @@ extension TabNav {
         static let directionIsForward = true
     }
 }
-
-#Preview {
-    TabNav(tabState: .constant(.init(currTab: .explore, transitionIsForward: true)))
-        .environmentObject(UserSettings())
-        
-}

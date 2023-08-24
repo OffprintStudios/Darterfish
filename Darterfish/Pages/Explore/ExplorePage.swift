@@ -53,6 +53,7 @@ struct ExplorePage: View {
                     .foregroundStyle(Color.white)
                     .padding(.trailing)
                 }
+                .padding(.top, 0)
                 .padding(.bottom)
                 .background(Color(userSettings.theme.accent).opacity(
                     scrollOffset > 0 ? (scrollOffset > 230 ? 1.0 : scrollOffset / 230) : 0

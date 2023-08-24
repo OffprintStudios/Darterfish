@@ -37,6 +37,33 @@
       }
     },
     {
+      "identity" : "pagertabstripview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xmartlabs/PagerTabStripView.git",
+      "state" : {
+        "revision" : "39ec00d2577adf75d82d1c7023c56950b96d2298",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "richtext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NuPlay/RichText.git",
+      "state" : {
+        "revision" : "ff468d18b066ea5838a2d3f9cb572d55b8ebdb11",
+        "version" : "2.3.0"
+      }
+    },
+    {
+      "identity" : "richtextkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/danielsaidi/RichTextKit.git",
+      "state" : {
+        "revision" : "836ee7b701107490a0eafd2e4ad6b1558bba5e60",
+        "version" : "0.7.2"
+      }
+    },
+    {
       "identity" : "shuffleit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/dscyrescotti/ShuffleIt.git",
@@ -52,6 +79,24 @@
       "state" : {
         "revision" : "1136c9a348329887844de9353107c787becc675b",
         "version" : "0.11.0"
+      }
+    },
+    {
+      "identity" : "swiftuipager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fermoya/SwiftUIPager.git",
+      "state" : {
+        "revision" : "4ddc04c801aac143090bb14cf26603a3bf9c74cb",
+        "version" : "2.5.0"
+      }
+    },
+    {
+      "identity" : "wrappinghstack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dkk/WrappingHStack.git",
+      "state" : {
+        "revision" : "f31b8fdc57759c5aa5fc98c70746db5556e73300",
+        "version" : "2.2.10"
       }
     }
   ],

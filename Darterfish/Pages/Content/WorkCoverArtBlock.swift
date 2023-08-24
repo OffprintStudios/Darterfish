@@ -11,49 +11,58 @@ struct WorkCoverArtBlock: View {
     @Binding var work: Work
     
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            if let coverArt = work.coverArt {
-                AsyncImage(url: URL(string: coverArt)!) { phase in
-                    if let image = phase.image {
-                        VStack {
-                            Spacer()
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .clipped()
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
+        Section {
+            HStack(alignment: .bottom) {
+                if let coverArt = work.coverArt {
+                    AsyncImage(url: URL(string: coverArt)!) { phase in
+                        if let image = phase.image {
+                            VStack {
+                                Spacer()
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipped()
+                                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                            }
+                            .frame(width: 160, height: 256)
                         }
-                        .frame(width: 180, height: 288)
                     }
+                } else {
+                    Color.clear
+                        .frame(width: 160, height: 256)
                 }
-            } else {
-                Color.clear
-                    .frame(width: 125, height: 200)
+                HStack {
+                    Spacer()
+                    
+                    HStack {
+                        Button(action: { print("Like") }) {
+                            Image("RemixIcon/System/thumb-up-line")
+                                .resizable()
+                                .frame(width: 18, height: 18)
+                            Text("\(work.likes.formatUsingAbbrevation())")
+                                .font(.system(size: 14, weight: .semibold))
+                        }
+                        .padding(.trailing, 10)
+                        .foregroundStyle(Color.green)
+                        
+                        Button(action: { print("Dislike") }) {
+                            Image("RemixIcon/System/thumb-down-line")
+                                .resizable()
+                                .frame(width: 18, height: 18)
+                            Text("\(work.dislikes.formatUsingAbbrevation())")
+                                .font(.system(size: 14, weight: .semibold))
+                        }
+                        .foregroundStyle(Color.red)
+                    }
+                    .padding(10)
+                    .background(Color.gray.opacity(0.25))
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                }
             }
-            HStack {
-                Spacer()
-                
-                Button(action: { print("Like") }) {
-                    Image("RemixIcon/System/thumb-up-line")
-                        .resizable()
-                        .frame(width: 18, height: 18)
-                    Text("\(work.likes.formatUsingAbbrevation())")
-                        .font(.system(size: 18, weight: .semibold))
-                }
-                .padding(.trailing, 5)
-                .foregroundStyle(Color.green)
-                
-                Button(action: { print("Dislike") }) {
-                    Image("RemixIcon/System/thumb-down-line")
-                        .resizable()
-                        .frame(width: 18, height: 18)
-                    Text("\(work.dislikes.formatUsingAbbrevation())")
-                        .font(.system(size: 18, weight: .semibold))
-                }
-                .foregroundStyle(Color.red)
-            }
+            .padding(.top, 100)
+            .padding(.leading)
+            .padding(.trailing)
+            .padding(.bottom)
         }
-        .frame(height: 35)
-        .offset(y: -100)
     }
 }
