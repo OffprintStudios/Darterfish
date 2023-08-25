@@ -79,7 +79,7 @@ struct ContentView: View {
     }
 }
 
-#Preview {
+#Preview { 
     ContentView()
         .environmentObject(UserSettings())
 }

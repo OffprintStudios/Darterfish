@@ -35,7 +35,7 @@ struct WorkCoverArtBlock: View {
                     Spacer()
                     
                     HStack {
-                        Button(action: { print("Like") }) {
+                        Button(action: toggleLike) {
                             Image("RemixIcon/System/thumb-up-line")
                                 .resizable()
                                 .frame(width: 18, height: 18)
@@ -45,7 +45,7 @@ struct WorkCoverArtBlock: View {
                         .padding(.trailing, 10)
                         .foregroundStyle(Color.green)
                         
-                        Button(action: { print("Dislike") }) {
+                        Button(action: toggleDislike) {
                             Image("RemixIcon/System/thumb-down-line")
                                 .resizable()
                                 .frame(width: 18, height: 18)
@@ -64,5 +64,17 @@ struct WorkCoverArtBlock: View {
             .padding(.trailing)
             .padding(.bottom)
         }
+    }
+}
+
+extension WorkCoverArtBlock {
+    func toggleLike() {
+        // TODO: implement adding likes
+        print("Like: \(work.id)")
+    }
+    
+    func toggleDislike() {
+        // TODO: implement adding dislikes
+        print("Dislike: \(work.id)")
     }
 }

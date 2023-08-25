@@ -127,47 +127,6 @@ struct DetailsTab: View {
                 .frame(height: 100)
             }
             
-            /*if let coverArt = work.coverArt, let bannerArt = work.bannerArt {
-                VStack(alignment: .leading) {
-                    Text("Artwork")
-                        .font(.custom("JosefinSans-SemiBold", size: 24))
-                        .foregroundStyle(Color(userSettings.theme.accent))
-                    
-                    HStack(spacing: 10) {
-                        AsyncImage(url: URL(string: coverArt)!) { phase in
-                            if let image = phase.image {
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                    .onTapGesture {
-                                        coverArtOpen.toggle()
-                                    }
-                                    .sheet(isPresented: $coverArtOpen) {
-                                        ImagePreviewSheet(imageUrl: coverArt)
-                                    }
-                            }
-                        }
-                        
-                        AsyncImage(url: URL(string: bannerArt)!) { phase in
-                            if let image = phase.image {
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                    .onTapGesture {
-                                        bannerArtOpen.toggle()
-                                    }
-                                    .sheet(isPresented: $bannerArtOpen) {
-                                        ImagePreviewSheet(imageUrl: bannerArt)
-                                    }
-                            }
-                        }
-                    }
-                    .frame(width: .infinity, height: 72)
-                }
-            }*/
-            
             VStack(alignment: .leading) {
                 Text("Misc")
                     .font(.custom("JosefinSans-SemiBold", size: 24))
